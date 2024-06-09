@@ -1,0 +1,19 @@
+created_by: sdfas@rg.io
+domain: adsfasdfasd
+task_description: dfvzdfv
+seed_examples:
+  - question: sdfadsfadsf
+    answer: asdfasdfadsf
+  - question: asdfasdfz
+    answer: zzxcv
+  - question: qergszx
+    answer: sfgdavcs
+  - question: gfvdc
+    answer: gdf
+  - question: erfwd
+    answer: WRTQEFDS
+document:
+  repo: WIKI.link
+  commit: dafssadf
+  patterns:
+    - foo.md
