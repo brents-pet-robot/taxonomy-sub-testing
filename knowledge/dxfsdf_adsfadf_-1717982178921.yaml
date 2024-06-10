@@ -1,0 +1,19 @@
+created_by: df@sdf.org
+domain: asdf
+task_description: asdfadsf
+seed_examples:
+  - question: adfadfas
+    answer: dfgsad
+  - question: sdfv
+    answer: sfgdvcsxz
+  - question: hsfgd
+    answer: sgfbds
+  - question: sc
+    answer: sgfbdvc
+  - question: nwh
+    answer: wnthrg
+document:
+  repo: wrgbfdavsc
+  commit: grbfdsc
+  patterns:
+    - wrgbfde
