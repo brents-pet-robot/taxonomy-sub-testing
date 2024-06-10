@@ -1,0 +1,19 @@
+created_by: foo@blah.io
+domain: sfgdcx
+task_description: gsfd
+seed_examples:
+  - question: gfsdacx
+    answer: hfsgdacsx
+  - question: hgfvdcsx
+    answer: hgfvdascx
+  - question: gsfdvc
+    answer: htrwgbdfv
+  - question: hgfdcsx
+    answer: gwfadcsx
+  - question: whtrbgfd
+    answer: wrgafvds
+document:
+  repo: http:/repo.wiki
+  commit: sdfgags
+  patterns:
+    - rwgtefad.md
