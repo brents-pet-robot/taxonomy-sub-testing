@@ -1,0 +1,19 @@
+created_by: fgbdvcW@org.oi
+domain: b vc
+task_description: some knowledge
+seed_examples:
+  - question: fgd
+    answer: fgv
+  - question: hnfgd
+    answer: htdnsfg
+  - question: wrnygbtfed
+    answer: tnrwbtgeafd
+  - question: nrgbfd
+    answer: wrybgtf
+  - question: wnrtgfe
+    answer: rybtgf
+document:
+  repo: rgbfdv
+  commit: rgbfdv
+  patterns:
+    - gfbdvc
