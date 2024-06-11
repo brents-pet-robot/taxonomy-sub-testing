@@ -1,0 +1,19 @@
+created_by: sdf@dfd.org
+domain: sdf
+task_description: sdfg
+seed_examples:
+  - question: fgds
+    answer: fgbd
+  - question: fgbddfb
+    answer: fgbdd
+  - question: dbgfgs
+    answer: fgbdfs
+  - question: ffgbd
+    answer: dfgss
+  - question: fgdbs
+    answer: sdfa
+document:
+  repo: dfgfd
+  commit: dsfgs
+  patterns:
+    - sdfgsdf
