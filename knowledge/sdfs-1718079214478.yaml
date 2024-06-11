@@ -1,0 +1,19 @@
+created_by: sdf@sdfs.io
+domain: asdfdfg
+task_description: asdf
+seed_examples:
+  - question: rbgsdfav
+    answer: sgdf
+  - question: sgbfads
+    answer: grbadf
+  - question: wbgadf
+    answer: wbgafdds
+  - question: wretar
+    answer: dgfs
+  - question: tregr
+    answer: adfdf
+document:
+  repo: earfds
+  commit: aefdsdfg
+  patterns:
+    - geafd
