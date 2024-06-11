@@ -1,0 +1,17 @@
+created_by: sdf@er.org
+task_description: dfgdfg
+seed_examples:
+  - question: sdfadsf
+    answer: asd
+    context: asdfadsfadsf
+  - question: sfgdba
+    answer: gbdfa
+  - question: gbadf
+    answer: afds
+  - question: SDF
+    answer: rbefvdsc
+  - question: gbdafvxz
+    answer: sdafczx
+  - question: rtbaefvds
+    answer: bgafds
+    context: aefds
