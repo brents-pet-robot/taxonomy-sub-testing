@@ -1,0 +1,21 @@
+created_by: cdxvsd@sdf.io
+domain: sgfbdv
+task_description: grsfd
+seed_examples:
+  - question: hfgsbda
+    answer: gfsdscxdf
+  - question: dbfsvcdx
+    answer: sfhgbsfgb
+  - question: hfsgdsfgb
+    answer: sfhgsgfb
+  - question: sfgbsfg
+    answer: sgfbsgbwsdfg
+  - question: sgbsgb
+    answer: wrgbwrgbefgefg
+  - question: wrgbwrgbwrgb
+    answer: wrgbwrgb
+document:
+  repo: wrgbwrgb
+  commit: wrgbwrgbwrgbw
+  patterns:
+    - wrgbwrgbwrgb
