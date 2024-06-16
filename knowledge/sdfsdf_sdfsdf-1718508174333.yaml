@@ -1,0 +1,19 @@
+created_by: dfdf@sdfs.org
+domain: sdfasdf
+task_description: asdfadfa
+seed_examples:
+  - question: fda
+    answer: sgrbfad
+  - question: afd
+    answer: df
+  - question: sgfd
+    answer: gsbdfav
+  - question: sgbafd
+    answer: fadvs
+  - question: xzcvb
+    answer: bv
+document:
+  repo: https://github.com/nerdalert/taxonomy-document-store
+  commit: b2a1cb77c85ea2741b0afecdd0f9349e43c8fb13
+  patterns:
+    - git-tutorial.md
