@@ -1,0 +1,19 @@
+created_by: dfg@sdf.io
+domain: fdss
+task_description: fgds
+seed_examples:
+  - question: dfv
+    answer: dd
+  - question: ff
+    answer: gg
+  - question: hh
+    answer: xc
+  - question: cc
+    answer: zz
+  - question: we
+    answer: ew
+document:
+  repo: https://github.com/nerdalert/taxonomy-document-store
+  commit: cd695029989eb79846eb5f5ff23b55c8a7026711
+  patterns:
+    - git-tutorial.md
