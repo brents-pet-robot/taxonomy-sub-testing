@@ -1,0 +1,20 @@
+created_by: dfv@sdfs.org
+domain: sdf
+task_description: dsfvcx
+seed_examples:
+  - question: dfv
+    answer: sdfvs
+  - question: adfvsdf
+    answer: sdfsdfvsdf
+  - question: sdfvsdfvs
+    answer: asdca
+  - question: gbfdd
+    answer: asdfdd
+  - question: dff
+    answer: fd
+document:
+  repo: https://github.com/nerdalert/taxonomy-document-store
+  commit: 18ff949ba89071a618f1a5779f5c4fcb4015722b
+  patterns:
+    - git-tutorial.md
+    - InstructLab UI.pdf
