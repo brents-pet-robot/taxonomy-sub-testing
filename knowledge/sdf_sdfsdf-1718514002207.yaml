@@ -1,0 +1,19 @@
+created_by: dsf@sdf.org
+domain: asdfadsfsd
+task_description: asdfadsf
+seed_examples:
+  - question: sd
+    answer: fgd
+  - question: bfd
+    answer: sdfs
+  - question: fdsa
+    answer: azx
+  - question: tv
+    answer: ve
+  - question: fw
+    answer: wef
+document:
+  repo: https://github.com/nerdalert/taxonomy-document-store
+  commit: 8b3dc08b40248a2cac2ca290ab6e0308f3a68423
+  patterns:
+    - git-tutorial.md
