@@ -1,0 +1,20 @@
+created_by: brent.salisbury@gmail.com
+domain: ssd
+task_description: sfsfd
+seed_examples:
+  - question: Q1
+    answer: A1
+  - question: Q2
+    answer: Q2
+  - question: Q3
+    answer: A3
+  - question: Q4
+    answer: A4
+  - question: Q5
+    answer: A5
+document:
+  repo: https://github.com/nerdalert/taxonomy-document-store
+  commit: 534839064ba504f8d457590063b607be13e7a483
+  patterns:
+    - git-examples.md
+    - InstructLab-UI.pdf
