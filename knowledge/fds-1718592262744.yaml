@@ -1,0 +1,20 @@
+created_by: sdf@sdfsf.or
+domain: sdfvsd
+task_description: sfda
+seed_examples:
+  - question: bgfds
+    answer: sc
+  - question: vdf
+    answer: s
+  - question: csc
+    answer: c
+  - question: a
+    answer: cx
+  - question: z
+    answer: vb
+document:
+  repo: https://github.com/nerdalert/taxonomy-document-store
+  commit: 29a66467906f724d32ad1236a582233077f63be7
+  patterns:
+    - git-tutorial.md
+    - InstructLab UI-1.pdf
