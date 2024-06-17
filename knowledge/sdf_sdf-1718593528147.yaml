@@ -1,0 +1,20 @@
+created_by: sdfsd@sdfs.org
+domain: dfv
+task_description: rgfdvs
+seed_examples:
+  - question: zxc
+    answer: hrte
+  - question: yhrt
+    answer: sd
+  - question: rhr
+    answer: aa
+  - question: htt
+    answer: hhv
+  - question: vdfadf
+    answer: adff
+document:
+  repo: https://github.com/nerdalert/taxonomy-document-store
+  commit: 7a4e6da8b9928e758228590aaef836f1aeb8b3cd
+  patterns:
+    - git-tutorial.md
+    - InstructLab UI.pdf
