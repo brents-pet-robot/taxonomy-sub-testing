@@ -1,0 +1,5 @@
+Title of work: a
+Link to work: b
+Revision: c
+License of the work: d
+Creator names: e

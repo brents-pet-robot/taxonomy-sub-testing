@@ -1,0 +1,19 @@
+created_by: Gregory-Pereira
+domain: dis knowledge
+task_description: some knowledge I got
+seed_examples:
+  - question: a
+    answer: b
+  - question: c
+    answer: d
+  - question: e
+    answer: f
+  - question: g
+    answer: h
+  - question: i
+    answer: j
+document:
+  repo: https://github.com/Gregory-Pereira/instructlab-knowledge-docs
+  commit: 39e6b4c4cccb52d713dd9056120ee3970832014e
+  patterns:
+    - en_wikipedia-20240618T210312669.pdf
