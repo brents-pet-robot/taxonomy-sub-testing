@@ -1,0 +1,20 @@
+created_by: fd@dfg.oth
+domain: cavg
+task_description: sdfs
+seed_examples:
+  - question: whte
+    answer: sdfg
+  - question: ytrt
+    answer: rywvw
+  - question: vwwrt
+    answer: wrthwh
+  - question: wrthqaef
+    answer: dfvbr
+  - question: y5wrt
+    answer: df
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 38aec79b8cadafd0f0c50edaa3beff3e0f62e415
+  patterns:
+    - git-examples.md
+    - InstructLab-UI.pdf
