@@ -1,0 +1,19 @@
+created_by: sdf@sdf.oi
+domain: df
+task_description: fvcx
+seed_examples:
+  - question: sdf
+    answer: sdfs
+  - question: fds
+    answer: ad
+  - question: vs
+    answer: zc
+  - question: g
+    answer: t
+  - question: 'y'
+    answer: ww
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 4dcf9e00ba933262636cd8d64fdb9086bb9844ce
+  patterns:
+    - git-examples.md
