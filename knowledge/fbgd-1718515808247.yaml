@@ -1,0 +1,20 @@
+created_by: dfg@ert.orr
+domain: sdfb
+task_description: sfd
+seed_examples:
+  - question: sdfb
+    answer: v
+  - question: e
+    answer: 'y'
+  - question: g
+    answer: vs
+  - question: vss
+    answer: aa
+  - question: asddad
+    answer: asdasaah
+document:
+  repo: https://github.com/nerdalert/taxonomy-document-store
+  commit: 4cc6f20c5fcec9cf9e68f52861a2ce2c048d46af
+  patterns:
+    - git-tutorial.md
+    - InstructLab UI.pdf
