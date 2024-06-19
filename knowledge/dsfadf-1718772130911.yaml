@@ -1,0 +1,19 @@
+created_by: sdf@sdf.io
+domain: nfhdsfg
+task_description: dsfg
+seed_examples:
+  - question: sfhg
+    answer: ad
+  - question: htwq4
+    answer: 4twtr4
+  - question: rwq
+    answer: 4th
+  - question: 4hte
+    answer: 42th
+  - question: dsfg
+    answer: zs
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 0bd87ab9816f57c1825df3a19ba2eda702789770
+  patterns:
+    - git-examples-20240619T044148352.md
