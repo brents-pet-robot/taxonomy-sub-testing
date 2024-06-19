@@ -1,0 +1,19 @@
+created_by: nerdalert
+domain: asdfadsfa
+task_description: sdfads
+seed_examples:
+  - question: rtwf
+    answer: wer
+  - question: '433'
+    answer: g4eg
+  - question: 4ť
+    answer: 4tg4tg
+  - question: sdfs
+    answer: adfasdfa
+  - question: asdfadsfasdf
+    answer: asdfasdfasdfasd
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 2be884d53b8bf2bb0d9cdce4f00c587f12c137cc
+  patterns:
+    - git-examples-20240619T045542204.md
