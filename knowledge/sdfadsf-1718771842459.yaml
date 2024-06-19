@@ -1,0 +1,19 @@
+created_by: sdf@refg.org
+domain: asdfadsfads
+task_description: asdfad
+seed_examples:
+  - question: ads
+    answer: aetr
+  - question: rwteasa
+    answer: aregt
+  - question: wrytae
+    answer: aertr
+  - question: rwnygbadf
+    answer: wrteafds
+  - question: wrtbgadf
+    answer: rwtfaeds
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: eb42a214d3a59ba58087c061b2823e8dda0ba542
+  patterns:
+    - git-examples-20240619T043718386.md
