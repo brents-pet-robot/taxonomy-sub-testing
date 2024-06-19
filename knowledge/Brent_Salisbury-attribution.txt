@@ -1,0 +1,5 @@
+Title of work: Foo
+Link to work: http://link.foo
+Revision: sdf
+License of the work: sdfasdf
+Creator names: asdfasdfa
