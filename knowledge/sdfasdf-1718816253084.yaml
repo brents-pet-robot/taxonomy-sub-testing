@@ -1,0 +1,19 @@
+created_by: nerdalert
+domain: asdfadsf
+task_description: asdfa
+seed_examples:
+  - question: sdfa
+    answer: tr
+  - question: asd
+    answer: ca
+  - question: 5y
+    answer: rg
+  - question: wtr
+    answer: 4ht
+  - question: 42h
+    answer: 24h4t
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: cd16c111107dc62a714040031e9174c4b1480aa1
+  patterns:
+    - git-examples-20240619T165633488.md
