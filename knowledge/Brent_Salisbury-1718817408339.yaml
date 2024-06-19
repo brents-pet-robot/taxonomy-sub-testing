@@ -1,0 +1,20 @@
+created_by: nerdalert
+domain: dfg
+task_description: fdfa
+seed_examples:
+  - question: Q1
+    answer: A1
+  - question: Q2
+    answer: A2
+  - question: Q3
+    answer: A3
+  - question: Q4
+    answer: A4
+  - question: Q5
+    answer: A5
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: d7681809545295c10d23c05c5e6e2eb3c239c0fd
+  patterns:
+    - git-examples-20240619T171558208.md
+    - List of countries by GDP (nominal) - Wikipedia-20240619T171558208.pdf
