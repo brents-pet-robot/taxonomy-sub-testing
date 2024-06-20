@@ -1,0 +1,19 @@
+created_by: nerdalert
+domain: sdfs
+task_description: sfgbd
+seed_examples:
+  - question: gsdf
+    answer: fgbd
+  - question: yj
+    answer: et
+  - question: ethn
+    answer: enertee
+  - question: nehn
+    answer: rgnerg
+  - question: enetre
+    answer: thnethneth
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: be75a72ff70f3042f3e150b66576bb15c229b503
+  patterns:
+    - git-examples-20240620T032044263.md
