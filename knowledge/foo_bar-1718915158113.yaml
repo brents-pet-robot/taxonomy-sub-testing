@@ -1,0 +1,19 @@
+created_by: nerdalert
+domain: asdfasdfa
+task_description: sdfa
+seed_examples:
+  - question: dfgsfsdfgs
+    answer: sdf
+  - question: twerg
+    answer: ht4
+  - question: h4td
+    answer: dsfgs
+  - question: 5tg
+    answer: q534tg
+  - question: q54w4t
+    answer: q53g
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 48199e641fd325f58d0ac0bfb76b302436ffe41c
+  patterns:
+    - InstructLab-UI-20240620T202551895.pdf
