@@ -1,0 +1,19 @@
+created_by: nerdalert
+domain: fdsg
+task_description: gfbd
+seed_examples:
+  - question: sfgb
+    answer: s
+  - question: bdf
+    answer: bsgbs
+  - question: sdf3q
+    answer: 3vr
+  - question: avfq
+    answer: 3rt
+  - question: tgb
+    answer: yht
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 7c29a289c4e485989ac67abfb6b77d54c97236d2
+  patterns:
+    - git-examples-20240621T003811819.md
