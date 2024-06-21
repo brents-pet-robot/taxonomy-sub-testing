@@ -1,0 +1,19 @@
+created_by: nerdalert
+domain: qwer
+task_description: wer-12345
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 50cb41b3b36923070944b7e0b2dce171739b76ec
+  patterns:
+    - git-examples-20240621T002812185.md
+seed_examples:
+  - question: wer
+    answer: qwerq
+  - question: qwerqwer
+    answer: g
+  - question: qeg
+    answer: h4tq
+  - question: 54g3
+    answer: '54344'
+  - question: '442'
+    answer: gdfdsss
