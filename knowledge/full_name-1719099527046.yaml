@@ -1,0 +1,19 @@
+created_by: nerdalert
+domain: domain info
+task_description: brief descrip
+seed_examples:
+  - question: Q1
+    answer: A1
+  - question: edfrg
+    answer: erg
+  - question: ewrg
+    answer: egrerg
+  - question: tr
+    answer: gwerf
+  - question: wryt
+    answer: h
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 4d1dbf74642730584ca24efc68e7f249b7c3c6cc
+  patterns:
+    - git-examples-20240622T233823978.md
