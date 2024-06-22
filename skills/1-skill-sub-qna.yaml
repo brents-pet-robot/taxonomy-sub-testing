@@ -1,0 +1,18 @@
+created_by: brent.salisbury@gmail.com
+task_description: skill sub title
+seed_examples:
+  - question: qw-12345
+    context: qwe
+    answer: e
+  - question: qwer
+    context: rrr
+    answer: r
+  - question: wtre
+    context: 35g
+    answer: qeg3
+  - question: 45q
+    context: 53g3f
+    answer: 5erwr
+  - question: 55gg
+    context: ''
+    answer: gggs
