@@ -1,0 +1,5 @@
+Title of work: title of work
+Link to work: link to work
+Revision: doc revision
+License of the work: license
+Creator names: creator name

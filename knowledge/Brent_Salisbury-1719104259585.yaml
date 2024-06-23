@@ -1,0 +1,19 @@
+created_by: nerdalert
+domain: domain
+task_description: detailed decription
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: cf74c742d3f83f98faeea41e9677778544bb3dd6
+  patterns:
+    - git-examples-20240623T005709018.md
+seed_examples:
+  - question: Q1-54321
+    answer: A1
+  - question: dfv
+    answer: sdfg
+  - question: gbf
+    answer: vd
+  - question: grd
+    answer: sdss
+  - question: rtbefd
+    answer: eqr34
