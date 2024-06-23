@@ -1,0 +1,15 @@
+created_by: nerdalert
+task_description: detailed description of the skill
+seed_examples:
+  - question: q1
+    answer: a1
+    context: c1
+  - question: rf
+    answer: tbr
+    context: rtbr
+  - question: brtw
+    answer: qq
+  - question: rr
+    answer: vv
+  - question: qdd
+    answer: dds
