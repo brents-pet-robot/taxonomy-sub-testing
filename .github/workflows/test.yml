@@ -1,0 +1,28 @@
+name: Label issues
+
+on:
+  issues:
+    types:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  
+jobs:
+  label_issues:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Install GitHub CLI
+        run: sudo apt-get install -y gh
+
+      - name: Authenticate GitHub CLI
+        run: echo "${{ secrets.TOKEN }}" | gh auth login --with-token
+
+      - name: Add Labels to Issue
+        run: gh issue edit "${{ github.event.issue.number }}" --add-label "triage"
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN }}
+          GH_REPO: ${{ github.repository }}
