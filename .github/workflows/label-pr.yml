@@ -1,31 +1,24 @@
-name: Assign Labels
+name: Label PR Based on Commits
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
-
-permissions:
-  contents: read
-  issues: write
-  pull-requests: write
 
 jobs:
-  assign-labels:
+  label-pr:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-      - name: Execute assign labels
-        uses: mauroalderete/action-assign-labels@v1
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          conventional-commits: |
-            conventional-commits:
-              - type: 'skill'
-                nouns: ['skill', 'Skill']
-                labels: ['skill']
-              - type: 'knowledge'
-                nouns: ['knowledge', 'Knowledge']
-                labels: ['knowledge']
-          maintain-labels-not-matched: false
-          apply-changes: true
+          python-version: '3.9'
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      - name: Label Pull Request
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          python .github/label_pr.py
