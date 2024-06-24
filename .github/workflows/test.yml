@@ -1,8 +1,7 @@
 name: Label PR
 
 on:
-  issues:
-    types:
+  pull_request:
 
 permissions:
   contents: write
