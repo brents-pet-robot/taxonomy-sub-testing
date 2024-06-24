@@ -10,15 +10,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Set up GitHub CLI
-        uses: cli/cli-action@v3
-        with:
-          version: latest
-
-      - name: Check PR title for labels
-        id: check-title
+      - name: Set labels based on title
+        id: set-title-label
         run: |
           if [[ "${{ github.event.pull_request.title }}" == *"skill"* ]]; then
             echo "title_label=skill" >> $GITHUB_ENV
@@ -46,16 +41,23 @@ jobs:
           fi
 
       - name: Apply labels
+        uses: actions/github-script@v6
         if: env.title_label || env.commit_label
-        run: |
-          labels=()
-          if [ -n "$title_label" ]; then
-            labels+=("$title_label")
-          fi
-          if [ -n "$commit_label" ]; then
-            labels+=("$commit_label")
-          fi
-          gh pr edit ${{ github.event.pull_request.number }} --add-label "${labels[@]}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const labels = [];
+            if (process.env.title_label) {
+              labels.push(process.env.title_label);
+            }
+            if (process.env.commit_label) {
+              labels.push(process.env.commit_label);
+            }
+            if (labels.length > 0) {
+              await github.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: labels
+              });
+            }
