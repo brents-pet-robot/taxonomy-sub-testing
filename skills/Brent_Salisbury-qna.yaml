@@ -1,0 +1,18 @@
+created_by: nerdalert
+task_description: detailed descrip
+seed_examples:
+  - question: sdf-123
+    context: ''
+    answer: asdf
+  - question: trf
+    context: ''
+    answer: egtr
+  - question: q
+    context: rt
+    answer: rtww
+  - question: rwtbefvd
+    context: ''
+    answer: wrtefd
+  - question: wrtbfdaa
+    context: ''
+    answer: aa
