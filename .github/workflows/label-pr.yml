@@ -1,24 +1,44 @@
-name: Label PR Based on Commits
+name: Label PR based on commit message
 
 on:
   pull_request:
+    types: [opened, synchronize]
 
 jobs:
-  label-pr:
+  label_pr:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests
-      - name: Label Pull Request
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{ github.event.number }}
-        run: |
-          python .github/label_pr.py
+    - name: Check out the code
+      uses: actions/checkout@v3
+
+    - name: Set up GitHub CLI
+      uses: actions/setup-gh-cli@v1
+
+    - name: Get commit messages
+      id: get_commit_messages
+      run: |
+        messages=$(gh pr view ${{ github.event.number }} --json commits --jq '.commits[].commit.message')
+        echo "commit_messages=${messages}" >> $GITHUB_ENV
+
+    - name: Determine label
+      id: determine_label
+      run: |
+        label=""
+        if echo "${{ env.commit_messages }}" | grep -iq "skill"; then
+          label="skill"
+        elif echo "${{ env.commit_messages }}" | grep -iq "knowledge"; then
+          label="knowledge"
+        fi
+        echo "::set-output name=label::${label}"
+
+    - name: Add label to PR
+      if: steps.determine_label.outputs.label != ''
+      run: |
+        gh api \
+          -X POST \
+          -H "Accept: application/vnd.github+json" \
+          /repos/${{ github.repository }}/issues/${{ github.event.number }}/labels \
+          -f labels='["${{ steps.determine_label.outputs.label }}"]'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
