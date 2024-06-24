@@ -2,6 +2,7 @@ name: Label Pull Request
 
 on:
   pull_request:
+    types: [opened, synchronize]
 
 jobs:
   label-pr:
@@ -11,32 +12,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Check PR title for labels
-        id: check-title
-        run: |
-          if [[ "${{ github.event.pull_request.title }}" == *"skill"* ]]; then
-            echo "title_label=skill" >> $GITHUB_ENV
-          elif [[ "${{ github.event.pull_request.title }}" == *"knowledge"* ]]; then
-            echo "title_label=knowledge" >> $GITHUB_ENV
-          fi
-
-      - name: Check commit messages for labels
-        id: check-commits
+      - name: Get commits and apply labels
+        id: apply-labels
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const octokit = github.getOctokit(core.getInput('github-token'));
-            const commits = await octokit.rest.pulls.listCommits({
+            const octokit = require('@actions/github').getOctokit(process.env.GITHUB_TOKEN);
+            const context = require('@actions/github').context;
+            const { data: commits } = await octokit.rest.pulls.listCommits({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: context.issue.number,
             });
-            
+
             let skillCommit = false;
             let knowledgeCommit = false;
-            
-            commits.data.forEach(commit => {
+
+            commits.forEach(commit => {
               if (commit.commit.message.includes('skill')) {
                 skillCommit = true;
               }
@@ -44,32 +37,21 @@ jobs:
                 knowledgeCommit = true;
               }
             });
-            
-            if (skillCommit) {
-              core.exportVariable('commit_label', 'skill');
-            } else if (knowledgeCommit) {
-              core.exportVariable('commit_label', 'knowledge');
-            }
 
-      - name: Apply labels
-        uses: actions/github-script@v6
-        if: env.title_label || env.commit_label
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const labels = [];
-            if (process.env.title_label) {
-              labels.push(process.env.title_label);
-            }
-            if (process.env.commit_label) {
-              labels.push(process.env.commit_label);
-            }
-            if (labels.length > 0) {
-              const octokit = github.getOctokit(core.getInput('github-token'));
+            if (skillCommit) {
               await octokit.rest.issues.addLabels({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: context.issue.number,
-                labels: labels
+                labels: ['skill']
+              });
+            }
+
+            if (knowledgeCommit) {
+              await octokit.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: ['knowledge']
               });
             }
