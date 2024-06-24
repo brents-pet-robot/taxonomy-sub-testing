@@ -1,45 +1,55 @@
-name: Label PR based on commit message
+name: Label Pull Requests with Skills and Knowledge
 
 on:
   pull_request:
-    types: [opened, synchronize]
 
 permissions:
   contents: read
-  issues: write
   pull-requests: write
 
 jobs:
-  label_pr:
+  label_pull_request:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out the code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Get commit messages
-      id: get_commit_messages
-      run: |
-        PR_NUMBER="${{ github.event.number }}"
-        REPO="${{ github.repository }}"
-        COMMIT_MESSAGES=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github+json" https://api.github.com/repos/$REPO/pulls/$PR_NUMBER/commits | jq -r '.[].commit.message')
-        echo "commit_messages=$COMMIT_MESSAGES" >> $GITHUB_ENV
+      - name: Determine Labels from Title and Commits
+        id: check_labels
+        run: |
+          LABELS=()
 
-    - name: Determine label
-      id: determine_label
-      run: |
-        label=""
-        if echo "${{ env.commit_messages }}" | grep -iq "skill"; then
-          label="skill"
-        elif echo "${{ env.commit_messages }}" | grep -iq "knowledge"; then
-          label="knowledge"
-        fi
-        echo "::set-output name=label::${label}"
+          # Check PR title for keywords
+          echo "Checking PR title..."
+          if echo "${{ github.event.pull_request.title }}" | grep -iq 'skill'; then
+            LABELS+=("skill")
+          fi
+          if echo "${{ github.event.pull_request.title }}" | grep -iq 'knowledge'; then
+            LABELS+=("knowledge")
+          fi
 
-    - name: Add label to PR
-      if: steps.determine_label.outputs.label != ''
-      run: |
-        PR_NUMBER="${{ github.event.number }}"
-        REPO="${{ github.repository }}"
-        LABEL="${{ steps.determine_label.outputs.label }}"
-        curl -L -X POST -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github+json" https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels -d "{\"labels\":[\"$LABEL\"]}"
+          # Check last 10 commits for keywords
+          echo "Checking commit messages..."
+          git log --format=%B -n 10 ${GITHUB_SHA} | while read commit; do
+            if echo "$commit" | grep -iq 'skill'; then
+              LABELS+=("skill")
+            elif echo "$commit" | grep -iq 'knowledge'; then
+              LABELS+=("knowledge")
+            fi
+          done
+
+          # Remove duplicates
+          LABELS=($(echo "${LABELS[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
+          LABEL_STRING="${LABELS[*]}"
+          LABEL_STRING="${LABEL_STRING// /,}"
+          echo "Labels to apply: $LABEL_STRING"
+          echo "::set-output name=labels::$LABEL_STRING"
+
+      - name: Add Labels to PR
+        if: steps.check_labels.outputs.labels != ''
+        run: |
+          PR_NUMBER="${{ github.event.number }}"
+          REPO="${{ github.repository }}"
+          LABELS="${{ steps.check_labels.outputs.labels }}"
+          curl -L -X POST -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github+json" https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels -d "{\"labels\":[\"$LABELS\"]}"
