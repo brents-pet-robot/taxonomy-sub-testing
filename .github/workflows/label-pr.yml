@@ -6,32 +6,28 @@ jobs:
   label_pull_request:
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       pull-requests: write
 
     steps:
-      # Step to checkout the code, required to access commit messages
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step to determine labels based on title and commit messages
       - name: Determine Labels
         id: labeler
         run: |
           LABELS=()
 
-          # Check if 'skill' is in the title
           if echo "${{ github.event.pull_request.title }}" | grep -iq 'skill'; then
             LABELS+=("skill")
             echo "Skill label added from title"
           fi
 
-          # Check if 'knowledge' is in the title
           if echo "${{ github.event.pull_request.title }}" | grep -iq 'knowledge'; then
             LABELS+=("knowledge")
             echo "Knowledge label added from title"
           fi
 
-          # Check commit messages for 'skill' or 'knowledge'
           echo "Checking commit messages..."
           git log --format=%B -n 10 ${GITHUB_SHA} | while read commit; do
             echo "Commit message: $commit"
@@ -44,14 +40,12 @@ jobs:
             fi
           done
 
-          # Remove duplicates and format as a comma-separated string
           LABELS=($(echo "${LABELS[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
           LABEL_STRING="${LABELS[*]}"
           LABEL_STRING="${LABEL_STRING// /,}"
           echo "Final label string: ${LABEL_STRING}"
           echo "::set-output name=label_string::${LABEL_STRING}"
 
-      # Step to add labels to the pull request
       - name: Add Labels to Pull Request
         if: ${{ steps.labeler.outputs.label_string }}
         run: |
