@@ -13,7 +13,9 @@ jobs:
         run: sudo apt-get install -y gh
 
       - name: Authenticate GitHub CLI
-        run: echo "${{ secrets.TOKEN }}" | gh auth login --with-token
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN }}
+        run: gh auth setup-git
 
       - name: Add Labels to Issue
         env:
