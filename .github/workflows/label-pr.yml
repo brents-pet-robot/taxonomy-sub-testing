@@ -1,7 +1,8 @@
 name: Label Pull Requests with Skills and Knowledge
 
 on:
-  pull_request:
+  pull_request_target:
+    types: [opened, reopened, synchronize]
 
 permissions:
   contents: read
@@ -46,20 +47,17 @@ jobs:
           echo "Labels to apply: $LABEL_STRING"
           echo "::set-output name=labels::$LABEL_STRING"
 
-      - name: Create temporary label-actions config
+      - name: Apply Labels
         if: steps.check_labels.outputs.labels
         run: |
-          CONFIG_FILE=".github/label-actions-temp.yml"
-          echo "skill:" > $CONFIG_FILE
-          echo "  label: 'skill'" >> $CONFIG_FILE
-          echo "knowledge:" >> $CONFIG_FILE
-          echo "  label: 'knowledge'" >> $CONFIG_FILE
-          echo "Generated configuration:"
-          cat $CONFIG_FILE
+          for label in ${LABELS[@]}; do
+            gh pr edit ${{ github.event.pull_request.number }} --add-label "$label"
+          done
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Label Actions
-        if: steps.check_labels.outputs.labels
         uses: dessant/label-actions@v4.0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          config-path: '.github/label-actions-temp.yml'
+          config-path: '.github/label-actions.yml'
