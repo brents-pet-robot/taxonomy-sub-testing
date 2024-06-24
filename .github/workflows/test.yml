@@ -3,6 +3,7 @@ name: Label issues
 on:
   pull_request:
 
+
 jobs:
   label_issues:
     runs-on: ubuntu-latest
@@ -15,9 +16,13 @@ jobs:
       - name: Install GitHub CLI
         run: sudo apt-get install -y gh
 
-      - name: Authenticate and Add Labels to Issue
+      - name: Write GitHub Token to File
+        run: echo "${{ secrets.TOKEN }}" > gh_token.txt
+
+      - name: Authenticate GitHub CLI
+        run: gh auth login --with-token < gh_token.txt
+
+      - name: Add Labels to Issue
         env:
           GH_TOKEN: ${{ secrets.TOKEN }}
-        run: |
-          gh auth status
-          gh issue edit "${{ github.event.issue.number }}" --add-label "triage"
+        run: gh issue edit "${{ github.event.issue.number }}" --add-label "triage"
