@@ -1,65 +1,65 @@
-name: Label Pull Requests
+name: Label Pull Requests with Skills and Knowledge
 
 on:
   pull_request:
-    types:
+
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
   label_pull_request:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-      repository-projects: read 
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Debug GitHub CLI Version and Authentication
-        run: |
-          gh --version
-          gh auth status
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Determine Labels
-        id: labeler
+      - name: Determine Labels from Title and Commits
+        id: check_labels
         run: |
           LABELS=()
 
+          # Check PR title for keywords
+          echo "Checking PR title..."
           if echo "${{ github.event.pull_request.title }}" | grep -iq 'skill'; then
             LABELS+=("skill")
-            echo "Skill label added from title"
           fi
-
           if echo "${{ github.event.pull_request.title }}" | grep -iq 'knowledge'; then
             LABELS+=("knowledge")
-            echo "Knowledge label added from title"
           fi
 
+          # Check last 10 commits for keywords
           echo "Checking commit messages..."
           git log --format=%B -n 10 ${GITHUB_SHA} | while read commit; do
-            echo "Commit message: $commit"
             if echo "$commit" | grep -iq 'skill'; then
               LABELS+=("skill")
-              echo "Skill label added from commit"
             elif echo "$commit" | grep -iq 'knowledge'; then
               LABELS+=("knowledge")
-              echo "Knowledge label added from commit"
             fi
           done
 
+          # Remove duplicates
           LABELS=($(echo "${LABELS[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
           LABEL_STRING="${LABELS[*]}"
           LABEL_STRING="${LABEL_STRING// /,}"
-          echo "Final label string: ${LABEL_STRING}"
-          echo "::set-output name=label_string::${LABEL_STRING}"
+          echo "Labels to apply: $LABEL_STRING"
+          echo "::set-output name=labels::$LABEL_STRING"
 
-      - name: Add Labels to Pull Request
-        if: ${{ steps.labeler.outputs.label_string }}
+      - name: Create temporary label-actions config
+        if: steps.check_labels.outputs.labels
         run: |
-          echo "Adding labels to PR: ${{ steps.labeler.outputs.label_string }}"
-          gh pr edit ${{ github.event.pull_request.number }} --add-label "${{ steps.labeler.outputs.label_string }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONFIG_FILE=".github/label-actions-temp.yml"
+          echo "skill:" > $CONFIG_FILE
+          echo "  label: 'skill'" >> $CONFIG_FILE
+          echo "knowledge:" >> $CONFIG_FILE
+          echo "  label: 'knowledge'" >> $CONFIG_FILE
+          echo "Generated configuration:"
+          cat $CONFIG_FILE
+
+      - name: Label Actions
+        if: steps.check_labels.outputs.labels
+        uses: dessant/label-actions@v4.0.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          config-path: '.github/label-actions-temp.yml'
