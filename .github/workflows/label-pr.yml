@@ -50,15 +50,18 @@ jobs:
           echo "Labels to apply: $LABEL_STRING"
           echo "::set-output name=labels::$LABEL_STRING"
 
-      - name: Write GitHub Token to File
-        run: echo ${{ secrets.TOKEN }} > token.txt
+      - name: Run Labeler for Skill
+        if: contains(steps.check_labels.outputs.labels, 'skill')
+        uses: actions/labeler@8558fd74291d67161a8a78ce36a881fa63b766a9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          configuration-path: '.github/skill_labeler.yml'
+          sync-labels: false
 
-      - name: Authenticate GitHub CLI
-        run: gh auth login --with-token < token.txt
-
-      - name: Add Labels to PR
-        if: steps.check_labels.outputs.labels != ''
-        run: |
-          PR_NUMBER="${{ github.event.number }}"
-          LABELS="${{ steps.check_labels.outputs.labels }}"
-          gh pr edit $PR_NUMBER --add-label $LABELS
+      - name: Run Labeler for Knowledge
+        if: contains(steps.check_labels.outputs.labels, 'knowledge')
+        uses: actions/labeler@8558fd74291d67161a8a78ce36a881fa63b766a9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          configuration-path: '.github/knowledge_labeler.yml'
+          sync-labels: false
