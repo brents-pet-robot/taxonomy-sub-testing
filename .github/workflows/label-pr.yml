@@ -1,0 +1,61 @@
+name: Label Pull Request
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  label-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up GitHub CLI
+        uses: cli/cli-action@v3
+        with:
+          version: latest
+
+      - name: Check PR title for labels
+        id: check-title
+        run: |
+          if [[ "${{ github.event.pull_request.title }}" == *"skill"* ]]; then
+            echo "title_label=skill" >> $GITHUB_ENV
+          elif [[ "${{ github.event.pull_request.title }}" == *"knowledge"* ]]; then
+            echo "title_label=knowledge" >> $GITHUB_ENV
+          fi
+
+      - name: Check commit messages for labels
+        id: check-commits
+        run: |
+          git fetch origin ${{ github.event.pull_request.head.ref }}
+          skill_commit=false
+          knowledge_commit=false
+          while read -r commit_message; do
+            if [[ "$commit_message" == *"skill"* ]]; then
+              skill_commit=true
+            elif [[ "$commit_message" == *"knowledge"* ]]; then
+              knowledge_commit=true
+            fi
+          done < <(git log origin/${{ github.event.pull_request.head.ref }} --pretty=format:%s)
+          if [ "$skill_commit" = true ]; then
+            echo "commit_label=skill" >> $GITHUB_ENV
+          elif [ "$knowledge_commit" = true ]; then
+            echo "commit_label=knowledge" >> $GITHUB_ENV
+          fi
+
+      - name: Apply labels
+        if: env.title_label || env.commit_label
+        run: |
+          labels=()
+          if [ -n "$title_label" ]; then
+            labels+=("$title_label")
+          fi
+          if [ -n "$commit_label" ]; then
+            labels+=("$commit_label")
+          fi
+          gh pr edit ${{ github.event.pull_request.number }} --add-label "${labels[@]}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
