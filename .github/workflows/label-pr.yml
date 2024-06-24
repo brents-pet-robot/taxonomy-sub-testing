@@ -50,27 +50,6 @@ jobs:
           echo "Labels to apply: $LABEL_STRING"
           echo "::set-output name=labels::$LABEL_STRING"
 
-  labeler:
-    if: contains(needs.label_pull_request.outputs.labels, 'skill') || contains(needs.label_pull_request.outputs.labels, 'knowledge')
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    steps:
-      - name: "Labeler Action for Skill"
-        if: contains(needs.label_pull_request.outputs.labels, 'skill')
-        uses: actions/labeler@8558fd74291d67161a8a78ce36a881fa63b766a9 # v5.0.0
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          configuration-path: '.github/skill_labeler.yml'
-          sync-labels: false
-
-      - name: "Labeler Action for Knowledge"
-        if: contains(needs.label_pull_request.outputs.labels, 'knowledge')
-        uses: actions/labeler@8558fd74291d67161a8a78ce36a881fa63b766a9 # v5.0.0
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          configuration-path: '.github/knowledge_labeler.yml'
-          sync-labels: false
 
   add-comment:
     if: ${{ (github.event.action == 'labeled') && (github.event.label.name == 'triage-uncertain') }}
