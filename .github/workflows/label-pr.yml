@@ -5,6 +5,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
   pull-requests: write
 
 jobs:
@@ -52,4 +53,4 @@ jobs:
           PR_NUMBER="${{ github.event.number }}"
           REPO="${{ github.repository }}"
           LABELS="${{ steps.check_labels.outputs.labels }}"
-          curl -L -X POST -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github+json" https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels -d "{\"labels\":[\"$LABELS\"]}"
+          curl -L -X POST -H "Authorization: Bearer ${{ secrets.TOKEN }}" -H "Accept: application/vnd.github+json" https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels -d "{\"labels\":[\"$LABELS\"]}"
