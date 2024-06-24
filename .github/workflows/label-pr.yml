@@ -26,7 +26,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const commits = await github.pulls.listCommits({
+            const octokit = github.getOctokit(core.getInput('github-token'));
+            const commits = await octokit.rest.pulls.listCommits({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: context.issue.number,
@@ -64,7 +65,8 @@ jobs:
               labels.push(process.env.commit_label);
             }
             if (labels.length > 0) {
-              await github.issues.addLabels({
+              const octokit = github.getOctokit(core.getInput('github-token'));
+              await octokit.rest.issues.addLabels({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: context.issue.number,
