@@ -56,4 +56,4 @@ jobs:
           PR_NUMBER="${{ github.event.number }}"
           REPO="${{ github.repository }}"
           LABELS="${{ steps.check_labels.outputs.labels }}"
-          ./.github/add_labels.sh $PR_NUMBER $REPO $LABELS ${{ secrets.TOKEN }}
+          ./.github/label.sh $PR_NUMBER $REPO $LABELS ${{ secrets.TOKEN }}
