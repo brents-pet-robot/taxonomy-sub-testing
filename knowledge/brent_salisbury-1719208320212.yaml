@@ -1,0 +1,19 @@
+created_by: nerdalert
+domain: adsfadsfa
+task_description: ads
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 974d5970c8bebed274fcac7ff3ab944d77497037
+  patterns:
+    - git-examples-20240624T055149776.md
+seed_examples:
+  - question: asdf-321
+    answer: asdfa
+  - question: trw
+    answer: qregq
+  - question: hq4t
+    answer: h1443
+  - question: h4t4th4
+    answer: h4th4th4h
+  - question: 24ht42th4
+    answer: 24h24t4t424
