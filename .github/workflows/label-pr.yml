@@ -2,7 +2,7 @@ name: Label Pull Requests with Skills and Knowledge
 
 on:
   pull_request_target:
-  
+
 permissions:
   contents: read
   issues: write
@@ -50,38 +50,9 @@ jobs:
           echo "Labels to apply: $LABEL_STRING"
           echo "::set-output name=labels::$LABEL_STRING"
 
-  add-comment:
-    permissions:
-      pull-requests: write
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: "Add comment"
+      - name: Add Skill or Knowledge Label
+        if: ${{ steps.check_labels.outputs.labels != '' }}
         run: |
-          gh pr comment "${PULL_REQUEST_NUMBER}" --body "${PULL_REQUEST_COMMENT}"
+          gh pr edit ${{ github.event.number }} --add-label ${{ steps.check_labels.outputs.labels }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: ${{ github.repository }}
-          PULL_REQUEST_NUMBER: ${{ github.event.number }}
-          PULL_REQUEST_COMMENT: >
-            Hi! So you've been marked as `triage-uncertain`, don't fret!
-            This just means the triage team or member needs to discuss your PR during one of our [public meetings](https://github.com/instructlab/community/blob/main/Collaboration.md#triager-standup) before making a decision. (Yes! You are more than welcome to join us.)
-            You have either made something amazing, or maybe hit a corner case that we hadn't thought of, or something like that.
-            :star2: Thank you for your contribution! And you are pushing our :dog: :computer: project and we can't thank you enough. :sparkles:
-
-  add-foobar-label:
-    permissions:
-      pull-requests: write
-    runs-on: ubuntu-latest
-    steps:
-      - name: "Harden Runner"
-        uses: step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6 # v2.8.1
-        with:
-          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
-
-      - name: "Add foobar label"
-        run: |
-          gh pr edit "${{ github.event.number }}" --add-label "foobar"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: ${{ github.repository }}
