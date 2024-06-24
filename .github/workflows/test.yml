@@ -1,14 +1,17 @@
-name: Label issues
+name: Label Pull Requests with Skills and Knowledge
 
 on:
   pull_request:
 
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
 
 jobs:
-  label_issues:
+  label_pull_request:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -16,13 +19,47 @@ jobs:
       - name: Install GitHub CLI
         run: sudo apt-get install -y gh
 
-      - name: Write GitHub Token to File
-        run: echo "${{ secrets.TOKEN }}" > gh_token.txt
+      - name: Determine Labels from Title and Commits
+        id: check_labels
+        run: |
+          LABELS=()
 
-      - name: Authenticate GitHub CLI
-        run: gh auth login --with-token < gh_token.txt
+          # Check PR title for keywords
+          echo "Checking PR title..."
+          if echo "${{ github.event.pull_request.title }}" | grep -iq 'skill'; then
+            LABELS+=("skill")
+          fi
+          if echo "${{ github.event.pull_request.title }}" | grep -iq 'knowledge'; then
+            LABELS+=("knowledge")
+          fi
 
-      - name: Add Labels to Issue
-        env:
-          GH_TOKEN: ${{ secrets.TOKEN }}
-        run: gh issue edit "${{ github.event.issue.number }}" --add-label "triage"
+          # Check last 10 commits for keywords
+          echo "Checking commit messages..."
+          git log --format=%B -n 10 ${GITHUB_SHA} | while read commit; do
+            if echo "$commit" | grep -iq 'skill'; then
+              LABELS+=("skill")
+            elif echo "$commit" | grep -iq 'knowledge'; then
+              LABELS+=("knowledge")
+            fi
+          done
+
+          # Remove duplicates
+          LABELS=($(echo "${LABELS[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
+          LABEL_STRING="${LABELS[*]}"
+          LABEL_STRING="${LABEL_STRING// /,}"
+          echo "Labels to apply: $LABEL_STRING"
+          echo "::set-output name=labels::$LABEL_STRING"
+
+      - name: Run Labeler for Skill
+        if: contains(steps.check_labels.outputs.labels, 'skill')
+        uses: actions/labeler@v5.0.0
+        with:
+          repo-token: ${{ secrets.TOKEN }}
+          configuration-path: '.github/skill_labeler.yml'
+
+      - name: Run Labeler for Knowledge
+        if: contains(steps.check_labels.outputs.labels, 'knowledge')
+        uses: actions/labeler@v5.0.0
+        with:
+          repo-token: ${{ secrets.TOKEN }}
+          configuration-path: '.github/knowledge_labeler.yml'
