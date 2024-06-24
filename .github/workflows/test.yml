@@ -9,16 +9,15 @@ jobs:
     permissions:
       issues: write
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Install GitHub CLI
         run: sudo apt-get install -y gh
 
-      - name: Authenticate GitHub CLI
+      - name: Authenticate and Add Labels to Issue
         env:
           GH_TOKEN: ${{ secrets.TOKEN }}
-        run: gh auth setup-git
-
-      - name: Add Labels to Issue
-        env:
-          GH_TOKEN: ${{ secrets.TOKEN }}
-          GH_REPO: ${{ github.repository }}
-        run: gh issue edit "${{ github.event.issue.number }}" --add-label "triage"
+        run: |
+          gh auth status
+          gh issue edit "${{ github.event.issue.number }}" --add-label "triage"
