@@ -1,0 +1,16 @@
+created_by: nerdalert
+task_description: sdfg
+seed_examples:
+  - question: asdf
+    answer: asdg
+  - question: ga
+    answer: agsa
+    context: g
+  - question: r
+    answer: 2wt4
+    context: 4ht
+  - question: dsafb
+    answer: sdbsfb
+    context: xcb
+  - question: wrwrtbwrt
+    answer: wbrtbwrt
