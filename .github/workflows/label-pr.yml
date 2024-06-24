@@ -1,17 +1,26 @@
 name: Label Pull Requests
+
 on:
   pull_request:
+    types:
 
 jobs:
   label_pull_request:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pull-requests: write
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Debug GitHub CLI Version and Authentication
+        run: |
+          gh --version
+          gh auth status
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Determine Labels
         id: labeler
