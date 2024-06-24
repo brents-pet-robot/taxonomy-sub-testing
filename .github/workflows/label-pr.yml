@@ -51,7 +51,6 @@ jobs:
           echo "::set-output name=labels::$LABEL_STRING"
 
   add-comment:
-    if: ${{ (github.event.action == 'labeled') && (github.event.label.name == 'triage-uncertain') }}
     permissions:
       pull-requests: write
     runs-on: ubuntu-latest
