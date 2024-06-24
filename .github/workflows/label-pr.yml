@@ -17,37 +17,45 @@ jobs:
       - name: Determine Labels
         id: labeler
         run: |
-          TITLE_LABEL=""
-          COMMIT_LABEL=""
+          LABELS=()
 
           # Check if 'skill' is in the title
-          if echo "${{ github.event.pull_request.title }}" | grep -i 'skill'; then
-            TITLE_LABEL="skill"
+          if echo "${{ github.event.pull_request.title }}" | grep -iq 'skill'; then
+            LABELS+=("skill")
+            echo "Skill label added from title"
           fi
 
           # Check if 'knowledge' is in the title
-          if echo "${{ github.event.pull_request.title }}" | grep -i 'knowledge'; then
-            TITLE_LABEL="knowledge"
+          if echo "${{ github.event.pull_request.title }}" | grep -iq 'knowledge'; then
+            LABELS+=("knowledge")
+            echo "Knowledge label added from title"
           fi
 
           # Check commit messages for 'skill' or 'knowledge'
-          for commit in $(git log --format=%B -n 10 ${GITHUB_SHA}); do
+          echo "Checking commit messages..."
+          git log --format=%B -n 10 ${GITHUB_SHA} | while read commit; do
             echo "Commit message: $commit"
-            if echo "$commit" | grep -i 'skill'; then
-              COMMIT_LABEL="skill"
-            elif echo "$commit" | grep -i 'knowledge'; then
-              COMMIT_LABEL="knowledge"
+            if echo "$commit" | grep -iq 'skill'; then
+              LABELS+=("skill")
+              echo "Skill label added from commit"
+            elif echo "$commit" | grep -iq 'knowledge'; then
+              LABELS+=("knowledge")
+              echo "Knowledge label added from commit"
             fi
           done
 
-          # Set the labels as output variables
-          echo "::set-output name=title_label::$TITLE_LABEL"
-          echo "::set-output name=commit_label::$COMMIT_LABEL"
+          # Remove duplicates and format as a comma-separated string
+          LABELS=($(echo "${LABELS[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
+          LABEL_STRING="${LABELS[*]}"
+          LABEL_STRING="${LABEL_STRING// /,}"
+          echo "Final label string: ${LABEL_STRING}"
+          echo "::set-output name=label_string::${LABEL_STRING}"
 
       # Step to add labels to the pull request
       - name: Add Labels to Pull Request
-        if: steps.labeler.outputs.title_label != '' || steps.labeler.outputs.commit_label != ''
+        if: ${{ steps.labeler.outputs.label_string }}
         run: |
-          gh pr edit ${{ github.event.pull_request.number }} --add-label "${{ steps.labeler.outputs.title_label }},${{ steps.labeler.outputs.commit_label }}"
+          echo "Adding labels to PR: ${{ steps.labeler.outputs.label_string }}"
+          gh pr edit ${{ github.event.pull_request.number }} --add-label "${{ steps.labeler.outputs.label_string }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
