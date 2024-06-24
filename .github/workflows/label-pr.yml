@@ -2,7 +2,6 @@ name: Label Pull Request
 
 on:
   pull_request:
-    types: [opened]
 
 jobs:
   label-pr:
@@ -12,8 +11,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set labels based on title
-        id: set-title-label
+      - name: Check PR title for labels
+        id: check-title
         run: |
           if [[ "${{ github.event.pull_request.title }}" == *"skill"* ]]; then
             echo "title_label=skill" >> $GITHUB_ENV
@@ -23,22 +22,33 @@ jobs:
 
       - name: Check commit messages for labels
         id: check-commits
-        run: |
-          git fetch origin ${{ github.event.pull_request.head.ref }}
-          skill_commit=false
-          knowledge_commit=false
-          while read -r commit_message; do
-            if [[ "$commit_message" == *"skill"* ]]; then
-              skill_commit=true
-            elif [[ "$commit_message" == *"knowledge"* ]]; then
-              knowledge_commit=true
-            fi
-          done < <(git log origin/${{ github.event.pull_request.head.ref }} --pretty=format:%s)
-          if [ "$skill_commit" = true ]; then
-            echo "commit_label=skill" >> $GITHUB_ENV
-          elif [ "$knowledge_commit" = true ]; then
-            echo "commit_label=knowledge" >> $GITHUB_ENV
-          fi
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const commits = await github.pulls.listCommits({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
+            
+            let skillCommit = false;
+            let knowledgeCommit = false;
+            
+            commits.data.forEach(commit => {
+              if (commit.commit.message.includes('skill')) {
+                skillCommit = true;
+              }
+              if (commit.commit.message.includes('knowledge')) {
+                knowledgeCommit = true;
+              }
+            });
+            
+            if (skillCommit) {
+              core.exportVariable('commit_label', 'skill');
+            } else if (knowledgeCommit) {
+              core.exportVariable('commit_label', 'knowledge');
+            }
 
       - name: Apply labels
         uses: actions/github-script@v6
