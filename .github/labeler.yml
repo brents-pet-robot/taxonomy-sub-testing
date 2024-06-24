@@ -1,0 +1,7 @@
+skill:
+  - any:
+    - head-branch: ['.*']
+
+knowledge:
+  - any:
+    - head-branch: ['.*']
