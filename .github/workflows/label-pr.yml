@@ -16,8 +16,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Make script executable
-        run: chmod +x .github/label.sh
+      - name: Install GitHub CLI
+        run: sudo apt-get install -y gh
 
       - name: Determine Labels from Title and Commits
         id: check_labels
@@ -50,10 +50,15 @@ jobs:
           echo "Labels to apply: $LABEL_STRING"
           echo "::set-output name=labels::$LABEL_STRING"
 
+      - name: Write GitHub Token to File
+        run: echo ${{ secrets.TOKEN }} > token.txt
+
+      - name: Authenticate GitHub CLI
+        run: gh auth login --with-token < token.txt
+
       - name: Add Labels to PR
         if: steps.check_labels.outputs.labels != ''
         run: |
           PR_NUMBER="${{ github.event.number }}"
-          REPO="${{ github.repository }}"
           LABELS="${{ steps.check_labels.outputs.labels }}"
-          ./.github/label.sh $PR_NUMBER $REPO $LABELS ${{ secrets.TOKEN }}
+          gh pr edit $PR_NUMBER --add-label $LABELS
