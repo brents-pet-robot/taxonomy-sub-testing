@@ -4,6 +4,11 @@ on:
   pull_request:
     types: [opened, synchronize]
 
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
 jobs:
   label_pr:
     runs-on: ubuntu-latest
@@ -12,14 +17,13 @@ jobs:
     - name: Check out the code
       uses: actions/checkout@v3
 
-    - name: Set up GitHub CLI
-      uses: actions/setup-gh-cli@v1
-
     - name: Get commit messages
       id: get_commit_messages
       run: |
-        messages=$(gh pr view ${{ github.event.number }} --json commits --jq '.commits[].commit.message')
-        echo "commit_messages=${messages}" >> $GITHUB_ENV
+        PR_NUMBER="${{ github.event.number }}"
+        REPO="${{ github.repository }}"
+        COMMIT_MESSAGES=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github+json" https://api.github.com/repos/$REPO/pulls/$PR_NUMBER/commits | jq -r '.[].commit.message')
+        echo "commit_messages=$COMMIT_MESSAGES" >> $GITHUB_ENV
 
     - name: Determine label
       id: determine_label
@@ -35,10 +39,7 @@ jobs:
     - name: Add label to PR
       if: steps.determine_label.outputs.label != ''
       run: |
-        gh api \
-          -X POST \
-          -H "Accept: application/vnd.github+json" \
-          /repos/${{ github.repository }}/issues/${{ github.event.number }}/labels \
-          -f labels='["${{ steps.determine_label.outputs.label }}"]'
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PR_NUMBER="${{ github.event.number }}"
+        REPO="${{ github.repository }}"
+        LABEL="${{ steps.determine_label.outputs.label }}"
+        curl -L -X POST -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github+json" https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels -d "{\"labels\":[\"$LABEL\"]}"
