@@ -1,5 +1,0 @@
-# .github/knowledge_labeler.yml
-knowledge:
-  - any:
-      changed-files:
-        - '**/*'
