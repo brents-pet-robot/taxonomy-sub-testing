@@ -1,5 +1,5 @@
 # .github/skill_labeler.yml
 skill:
-  any:
-    changed-files:
-      - '**/*'
+  - any:
+      changed-files:
+        - '**/*'
