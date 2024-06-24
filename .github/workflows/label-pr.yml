@@ -1,56 +1,53 @@
-name: Label Pull Request
-
+name: Label Pull Requests
 on:
   pull_request:
-    types: [opened, synchronize]
 
 jobs:
-  label-pr:
+  label_pull_request:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
 
     steps:
-      - name: Checkout repository
+      # Step to checkout the code, required to access commit messages
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Get commits and apply labels
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const { context, getOctokit } = require('@actions/github');
-            const octokit = getOctokit(process.env.GITHUB_TOKEN);
-            const { data: commits } = await octokit.rest.pulls.listCommits({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.issue.number,
-            });
+      # Step to determine labels based on title and commit messages
+      - name: Determine Labels
+        id: labeler
+        run: |
+          TITLE_LABEL=""
+          COMMIT_LABEL=""
 
-            let skillCommit = false;
-            let knowledgeCommit = false;
+          # Check if 'skill' is in the title
+          if echo "${{ github.event.pull_request.title }}" | grep -i 'skill'; then
+            TITLE_LABEL="skill"
+          fi
 
-            commits.forEach(commit => {
-              if (commit.commit.message.includes('skill')) {
-                skillCommit = true;
-              }
-              if (commit.commit.message.includes('knowledge')) {
-                knowledgeCommit = true;
-              }
-            });
+          # Check if 'knowledge' is in the title
+          if echo "${{ github.event.pull_request.title }}" | grep -i 'knowledge'; then
+            TITLE_LABEL="knowledge"
+          fi
 
-            if (skillCommit) {
-              await octokit.rest.issues.addLabels({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.issue.number,
-                labels: ['skill']
-              });
-            }
+          # Check commit messages for 'skill' or 'knowledge'
+          for commit in $(git log --format=%B -n 10 ${GITHUB_SHA}); do
+            echo "Commit message: $commit"
+            if echo "$commit" | grep -i 'skill'; then
+              COMMIT_LABEL="skill"
+            elif echo "$commit" | grep -i 'knowledge'; then
+              COMMIT_LABEL="knowledge"
+            fi
+          done
 
-            if (knowledgeCommit) {
-              await octokit.rest.issues.addLabels({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.issue.number,
-                labels: ['knowledge']
-              });
-            }
+          # Set the labels as output variables
+          echo "::set-output name=title_label::$TITLE_LABEL"
+          echo "::set-output name=commit_label::$COMMIT_LABEL"
+
+      # Step to add labels to the pull request
+      - name: Add Labels to Pull Request
+        if: steps.labeler.outputs.title_label != '' || steps.labeler.outputs.commit_label != ''
+        run: |
+          gh pr edit ${{ github.event.pull_request.number }} --add-label "${{ steps.labeler.outputs.title_label }},${{ steps.labeler.outputs.commit_label }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
