@@ -2,7 +2,7 @@ name: Label Pull Requests with Skills and Knowledge
 
 on:
   pull_request_target:
-    types: [opened, reopened, synchronize]
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: read
@@ -47,17 +47,10 @@ jobs:
           echo "Labels to apply: $LABEL_STRING"
           echo "::set-output name=labels::$LABEL_STRING"
 
-      - name: Apply Labels
-        if: steps.check_labels.outputs.labels
-        run: |
-          for label in ${LABELS[@]}; do
-            gh pr edit ${{ github.event.pull_request.number }} --add-label "$label"
-          done
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Label Actions
-        uses: dessant/label-actions@v4.0.1
+      - name: Apply labels
+        uses: actions/labeler@v5
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          config-path: '.github/label-actions.yml'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          configuration-path: '.github/labeler.yml'
+        env:
+          LABELS: ${{ steps.check_labels.outputs.labels }}
