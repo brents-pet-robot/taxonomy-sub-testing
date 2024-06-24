@@ -1,0 +1,19 @@
+created_by: Gregory-Pereira
+domain: testing 2 as
+task_description: testing 3 sdfsf
+document:
+  repo: https://github.com/Gregory-Pereira/instructlab-knowledge-docs
+  commit: 7d1e9ae59693b7d4a4a1769de2f0b74280ee4eca
+  patterns:
+    - State_of_the_Edge_2023-20240624T144717625.pdf
+seed_examples:
+  - question: asfa
+    answer: befs
+  - question: cfa
+    answer: daa
+  - question: efs
+    answer: efsaaa
+  - question: gefhs
+    answer: haxbhy
+  - question: iefs
+    answer: ja
