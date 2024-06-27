@@ -1,0 +1,21 @@
+created_by: nerdalert
+version: 2
+domain: asd
+task_description: asdfasdfa
+seed_examples:
+  - question: awf
+    answer: aa
+  - question: htwr
+    answer: w
+  - question: 5h42
+    answer: h254
+  - question: 2h
+    answer: 2h
+  - question: Q5
+    answer: A1
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: d79836a7c8ecb4754088a544b3fc0f5024599245
+  patterns:
+    - 2311.18481v1-20240627T024623572-20240627T032440505-20240627T201333285.md
+    - 2311.18481v1-20240627T015806661-20240627T201333285.md
