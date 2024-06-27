@@ -1,0 +1,20 @@
+created_by: nerdalert
+version: 2
+domain: foo
+task_description: asdfasdf-sdf-789
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 183ad7adf7c44ea338c24fa04b6b5e002c6a0af4
+  patterns:
+    - git-examples-20240625T021141396.md
+seed_examples:
+  - question: asd-12345
+    answer: as
+  - question: wht
+    answer: 4h
+  - question: 5jy
+    answer: w4hts
+  - question: qgg
+    answer: h45
+  - question: v24t
+    answer: v24aa
