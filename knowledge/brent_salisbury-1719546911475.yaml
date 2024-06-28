@@ -1,0 +1,20 @@
+created_by: nerdalert
+version: 2
+domain: asdfa
+task_description: adsfaa
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 868af5a9fd6ffb933581b12ef451a6522a444b62
+  patterns:
+    - Universal-Language-Model-Fine-tuning-for-Text-Classification-1801.06146v5-20240628T035322163.md
+seed_examples:
+  - question: asdfadsf123
+    answer: a
+  - question: fasdf
+    answer: th
+  - question: 4h
+    answer: daf
+  - question: h4h
+    answer: h4hhh
+  - question: h4tqw
+    answer: dfgsdfgsd
