@@ -1,0 +1,21 @@
+created_by: nerdalert
+version: 2
+domain: sdffsfs
+task_description: asf
+seed_examples:
+  - question: asdf
+    answer: f
+  - question: sdfg
+    answer: ger
+  - question: werg
+    answer: yrh
+  - question: dc
+    answer: h5yy5
+  - question: 5yhy53
+    answer: 4yth2
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 89d4c9ae6df1c90a5fb69974faf98d30e53db94a
+  patterns:
+    - rfc7348-20240701T150122005.md
+    - 2311.18481v1-20240627T024623572-20240701T150122005.md
