@@ -1,0 +1,19 @@
+created_by: nerdalert
+version: 2
+task_description: ASD-1
+seed_examples:
+  - question: fav123
+    context: ""
+    answer: er
+  - question: ever
+    context: query
+    answer: qq
+  - question: q4bte
+    context: ""
+    answer: b4t
+  - question: b4tb41t
+    context: ""
+    answer: b14tefd
+  - question: cv
+    context: ""
+    answer: Ava
