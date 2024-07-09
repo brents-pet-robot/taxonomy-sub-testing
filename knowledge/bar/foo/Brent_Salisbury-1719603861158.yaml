@@ -1,0 +1,23 @@
+created_by: brent.salisbury@gmail.com
+version: 2
+domain: foo
+task_description: bar
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: da4256d85d301c869c2757f1f28df10bcdb9440f
+  patterns:
+    - >-
+      Universal-Language-Model-Fine-tuning-for-Text-Classification-1801.06146v5-20240628T194310088.md
+seed_examples:
+  - question: Q1
+    answer: A1
+  - question: Q2
+    answer: A2
+  - question: Q3
+    answer: A3
+  - question: Q4
+    answer: Q4
+  - question: Q5-123
+    answer: A5
+  - question: Q6
+    answer: A6
