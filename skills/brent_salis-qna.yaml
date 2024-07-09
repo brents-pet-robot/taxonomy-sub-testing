@@ -1,0 +1,16 @@
+created_by: nerdalert
+version: 2
+task_description: ewtwet
+seed_examples:
+  - question: wtrewet
+    answer: tq4h
+    context: qetrg
+  - question: h34t
+    answer: sdb
+    context: dg
+  - question: t4e
+    answer: 4thqe
+  - question: 4htqed
+    answer: 4qteadaa
+  - question: 'sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf '
+    answer: 'sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf sdfdsadf '
