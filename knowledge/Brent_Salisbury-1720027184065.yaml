@@ -1,0 +1,25 @@
+created_by: nerdalert
+version: 2
+domain: sdfadsf 213123123
+task_description: asdfasdfa
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 5b9f3490061fbea70a74216297ff77bb0675f625
+  patterns:
+    - rfc7348-20240703T171710961.md
+seed_examples:
+  - question: |-
+      213123123  213123123 213123123 213123123 213123123 213123123 213123123 213123123
+      213123123 213123123 213123123 213123123 213123123 213123123 213123123 213123123
+      213123123 213123123 213123123 213123123 213123123 213123123 213123123 213123123
+      213123123 213123123 213123123 213123123 213123123 213123123 213123123 213123123
+      213123123 213123123 213123123 213123123 456m w3r2 sdfadsf sdfadsf sdfadsf
+    answer: asdfadsf-54321. sdfsdfsdfasdf
+  - question: as-12345
+    answer: asdf
+  - question: asdfas
+    answer: asdfasdfa
+  - question: asdfasfdwerwer
+    answer: afsfda
+  - question: adsfasdfadsfa
+    answer: asdfasfd
