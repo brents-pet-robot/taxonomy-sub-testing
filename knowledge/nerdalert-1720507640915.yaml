@@ -1,0 +1,25 @@
+created_by: brent.salisbury@gmail.com
+version: 2
+domain: adfadfadsf
+task_description: asdfasdfadsfadsf sdf asdfasdf
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 17a13c32ad81057939a3d4bbf7be4fba51af6b4e
+  patterns:
+    - rfc7348-20240709T064707057.md
+seed_examples:
+  - question: >-
+      asdfasdf asdfasdf asdfasdf asdfasdf asdfasdf asdfasdf asdfasdf asdfasdf
+      asdfasdf asdfasdf asdfasdf asdfasdf asdfasdf asdfasdf asdfasdf asdfasdf
+      asdfasdf asdfasdf asdfasdf edited 567 1234
+    answer: >-
+      asdfasdf asdfasdf asdfasdf asdfasdf asdfasdf asdfasdf asdfasdf asdfasdf
+      asdfasdf asdfasdf  2333223
+  - question: "asdfasdf asdfasdf asdfasdf asdfasdf asdfasdf "
+    answer: "asdfasdf "
+  - question: "asdfasdf edits asdfasdf asdfasdf "
+    answer: asdfasdf asdfasdf asdfasdf asdfasdf dfv
+  - question: dfdfa
+    answer: qbter
+  - question: qeqev
+    answer: qevevweve
