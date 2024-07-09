@@ -1,0 +1,69 @@
+created_by: brent.salisbury@gmail.com
+version: 2
+domain: sdfgsdfgsdf
+task_description: >-
+  sdfgsdfgsdfgsdfgsdfadsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+
+  adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf dfad 123456
+
+  adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf dfadsfasdf
+  adsfasd dfadsfasdf adsfasd dfadsfasdf adsfasd dfadsfasdf adsfasd dfadsfasdf
+  adsfasd dfadsfasdf adsfasd dfadsfasdf adsfasd dfadsfasdf adsfasd dfadsfasdf
+  adsfasd
+
+  adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+
+  adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+
+  adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+
+  adsfasdfasdfadsfasdf adsfasd fasdfadsfasdfadsfas dfasdfadsfas dfadsfasdfasdfad
+  sfasdfa dsfasdfa sdfadsfasdfadsf asdfasdfadsfasdfadsfasdfas
+  fadsfasdfadsfasdfasdfa dsfasdfadsfasd fasdfad sfasdfad sfa sdfasdfadsfas
+  dfadsfasdfasdf adsfasdfadsfasdfasdfadsfasdfad sfasdfasdfad sfasdfadsf
+  asdfasdfadsfasdf
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: dd05461609b250788dda52babfad924d4f91e069
+  patterns:
+    - rfc7348-20240709T022957074.md
+seed_examples:
+  - question: >-
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf 123456
+
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+
+      adsfasdfasdfadsfasdf adsfasdfas dfadsfasdfadsfasdfa s
+      dfadsfasdfadsfasdfasd fadsfasd fadsfasdf asdfadsfas dfadsfasdfasdf adsfa
+      sdfadsfasdfasdfads fasdfadsf asdfas dfadsfasdfa dsfasdfasdfa dsfasdf
+      adsfasdf asdfadsfasdfadsfasdfasdfadsfasdf adsfasdf asdfadsfasdf
+      adsfasdfasdfadsf asdfadsfasdfasdfadsfasdfa dsfasdfasd fadsfasdfads
+      fasdfasdfadsfa sdfadsfas fasdfadsfasdfadffq33343333333 
+    answer: |-
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+  - question: adsfasdfasdfadsfasdf
+    answer: adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+  - question: |-
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+      adsfasdfasdfadsfasdf
+    answer: |-
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+  - question: |-
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+    answer: |-
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+      adsfasdfasdfadsfasdf adsfasdfasdfadsfasdf
+  - question: aefdaefv
+    answer: qerqer
