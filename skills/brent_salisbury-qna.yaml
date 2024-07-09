@@ -1,0 +1,23 @@
+created_by: nerdalert
+version: 2
+task_description: sdfg
+seed_examples:
+  - question: |-
+      asdf urrentLine.length urrentLine.length urrentLine.length urrentLine.length
+      urrentLine.length urrentLine.length urrentLine.length urrentLine.length
+      urrentLine.length urrentLine.length urrentLine.length urrentLine.length
+      urrentLine.length urrentLine.length urrentLine.length urrentLine.length
+    context: ""
+    answer: asdg
+  - question: ga
+    context: g
+    answer: agsa
+  - question: r
+    context: 4ht
+    answer: 2wt4
+  - question: dsafb
+    context: xcb
+    answer: sdbsfb
+  - question: wrwrtbwrt
+    context: ""
+    answer: wbrtbwrt
