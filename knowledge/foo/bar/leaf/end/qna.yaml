@@ -1,0 +1,25 @@
+created_by: nerdalert
+version: 2
+domain: sdfgsdfg-124
+task_description: sdfgsdfgsdfg
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 3cb05aa5907a521a37c34754ec54860a4443f9dc
+  patterns:
+    - rfc7348-20240710T032338393.md
+seed_examples:
+  - question: >-
+      sfdgsdfg "quotes" sfdgsdfg "quotes" sfdgsdfg "quotes" sfdgsdfg "quotes"
+      sfdgsdfg "quotes" sfdgsdfg "quotes" sfdgsdfg "quotes" sfdgsdfg "quotes"
+      sfdgsdfg "quotes" sfdgsdfg "quotes" sfdgsdfg "quotes" sfdgsdfg "quotes" 
+    answer: sdfgsdfgsdfg
+  - question: wrg
+    answer: wnrgds
+  - question: nrwwrn
+    answer: zvbc
+  - question: tw
+    answer: rwgs
+  - question: bz
+    answer: wnrww
+  - question: xsfdgsdfg "quotes" -123456
+    answer: afds
