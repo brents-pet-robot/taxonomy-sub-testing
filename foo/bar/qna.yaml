@@ -1,0 +1,32 @@
+created_by: nerdalert
+version: 2
+task_description: sdfgsdfg
+seed_examples:
+  - question: >-
+      dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg
+      dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg
+      dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg
+      dsfg. sdfsdfgsdfg 
+    context: >-
+      dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg
+      dsfg. sdfsdfgsdfg 
+    answer: >-
+      dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg
+      dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg
+      dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg
+      dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg 
+  - question: 'dsfg. sdfsdfgsdfg '
+    context: 'dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg dsfg. sdfsdfgsdfg '
+    answer: ergtw
+  - question: twgr
+    context: 4ht
+    answer: h42tteqrfe
+  - question: 4hh4t4tht4h
+    context: 4ht4th4th
+    answer: 4h4h4hsdfg
+  - question: 4hwtdf
+    context: ''
+    answer: t4hedvft
+  - question: w4h5tg
+    context: 4ht
+    answer: 4hterfdsf
