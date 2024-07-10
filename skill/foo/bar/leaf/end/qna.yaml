@@ -1,0 +1,31 @@
+created_by: nerdalert
+version: 2
+task_description: sdfgsdfgs
+seed_examples:
+  - question: sfgd-1234
+    context: wrtbwt4
+    answer: >-
+      4nytntyrgw 4nytntyrgw 4nytntyrgw 4nytntyrgw 4nytntyrgw 4nytntyrgw
+      4nytntyrgw 4nytntyrgw 4nytntyrgw 4nytntyrgw 4nytntyrgw 4nytntyrgw
+      4nytntyrgw 4nytntyrgw 4nytntyrgw 4nytntyrgw 4nytntyrgw 4nytntyrgw
+      4nytntyrgw 
+  - question: >-
+      trwb344 tweqrfd "Foo quotes" end tweqrfd "Foo quotes" end tweqrfd "Foo
+      quotes" end tweqrfd "Foo quotes" end tweqrfd "Foo quotes" end tweqrfd "Foo
+      quotes" end tweqrfd "Foo quotes" end tweqrfd "Foo quotes" end tweqrfd "Foo
+      quotes" end tweqrfd "Foo quotes" end tweqrfd "Foo quotes" end tweqrfd "Foo
+      quotes" end tweqrfd "Foo quotes" end 
+    context: tn4
+    answer: n4ytwr
+  - question: n4yrwgsf
+    context: umv4t
+    answer: vt4
+  - question: wert
+    context: ""
+    answer: xcvh
+  - question: 4t
+    context: "4"
+    answer: h4te
+  - question: 4h4h4
+    context: h4
+    answer: fdgs
