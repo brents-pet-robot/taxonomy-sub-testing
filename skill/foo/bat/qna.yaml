@@ -1,0 +1,25 @@
+created_by: nerdalert
+version: 2
+task_description: sdfgsdfg
+seed_examples:
+  - question: qewr
+    context: 
+    answer: qwerqewr
+  - question: qwerqwerqwer
+    context: 
+    answer: 45h
+  - question: h4
+    context: 
+    answer: |-
+      h44h
+      wreg45
+  - question: |-
+      45h4h5
+      ergwerg
+    context: 
+    answer: |-
+      regwerg
+      w4tgh4
+  - question: '49'
+    context: 4h5h4
+    answer: 46h4h
