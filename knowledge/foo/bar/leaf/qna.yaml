@@ -1,0 +1,25 @@
+created_by: nerdalert
+version: 2
+domain: sdfgsdf
+task_description: >-
+  sdfgsdfgsdfg 'single' "double" sdfgsdfgsdfg 'single' "double" sdfgsdfgsdfg
+  'single' "double" sdfgsdfgsdfg 'single' "double" sdfgsdfgsdfg 'single'
+  "double" sdfgsdfgsdfg 'single' "double" sdfgsdfgsdfg 'single' "double"
+  sdfgsdfgsdfg 'single' "double" sdfgsdfgsdfg 'single' "double" sdfgsdfgsdfg
+  'single' "double" sdfgsdfgsdfg 'single' "double" 
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 0d8d6680c71e507525c48eac06fbd1aba6757e17
+  patterns:
+    - rfc7348-20240711T162201734.md
+seed_examples:
+  - question: sdfg
+    answer: dsfgsdfg
+  - question: s4
+    answer: h424h
+  - question: 2h44h
+    answer: h424h2h4
+  - question: sdg
+    answer: sdfgsdfg
+  - question: 5ynwrt
+    answer: sdfbsgn
