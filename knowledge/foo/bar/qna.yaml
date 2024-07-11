@@ -1,0 +1,28 @@
+created_by: nerdalert
+version: 2
+domain: asdf
+task_description: asdfasdfasdf
+seed_examples:
+  - question: asd
+    answer: ht4wr4ht
+  - question: >-
+      t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg
+      t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg
+      t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg
+      t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg 
+    answer: >-
+      t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg
+      t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg t4tqeqtgwrtgwrtg 
+  - question: asdf
+    answer: asdfasdf
+  - question: eqrg
+    answer: qergq
+  - question: qergerg
+    answer: fe
+  - question: qer3
+    answer: 4h
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 21b6a97f080c6423fd748224d561875910ceabef
+  patterns:
+    - 2311.18481v1-20240711T011906818.md
