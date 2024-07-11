@@ -1,0 +1,22 @@
+created_by: nerdalert
+version: 2
+task_description: sdfa-123
+seed_examples:
+  - question: asdfasdf-12345
+    context: 
+    answer: asdfasff
+  - question: >-
+      'single' "double" 'single' "double" 'single' "double" 'single' "double"
+      'single' "double" 'single' "double" 'single' "double" 'single' "double"
+      'single' "double" 
+    context: 
+    answer: asdf
+  - question: fqer
+    context: 
+    answer: '425'
+  - question: 2h4
+    context: 
+    answer: 562h
+  - question: h26522
+    context: 
+    answer: h242222
