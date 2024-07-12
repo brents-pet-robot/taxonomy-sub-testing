@@ -60,10 +60,15 @@ jobs:
         run: |
           pip install -r scripts/requirements.txt
 
+      - name: "Download schema file"
+        run: |
+          mkdir -p /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/instructlab/schema/v2/
+          curl -o /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/instructlab/schema/v2/skill.json https://raw.githubusercontent.com/instructlab/schema/main/src/instructlab/schema/v2/skill.json
+          curl -o /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/instructlab/schema/v2/knowledge.json https://raw.githubusercontent.com/instructlab/schema/main/src/instructlab/schema/v2/knowledge.json
+
       - name: "Ensure schema files are available"
         run: |
           # Ensure the schema files are in the correct location
-          # This step may vary depending on how and where the schema files are stored
           if [ ! -f /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/instructlab/schema/v2/skill.json ]; then
             echo "Schema file is missing. Please ensure it is correctly installed."
             exit 1
