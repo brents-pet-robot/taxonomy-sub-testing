@@ -1,0 +1,24 @@
+created_by: nerdalert
+version: 2
+task_description: asdfasdfasdf-1123
+seed_examples:
+  - question: |-
+      asdfasdfasdf -321.
+      sdf 321
+    context: dsf
+    answer: gr3qe
+  - question: |-
+      g3aerdgare
+      wertgwtg.
+      erwvwertv.
+    answer: dfssdfg
+  - question: wertgwrtg
+    context: wrteg
+    answer: twrfa
+  - question: 4th4th
+    answer: t4t
+  - question: sdfgrgbfds
+    context: '321 '
+    answer: >-
+      wrtbef wrtbef wrtbef wrtbef wrtbef wrtbef wrtbef wrtbef wrtbef wrtbef
+      wrtbef wrtbef wrtbef
