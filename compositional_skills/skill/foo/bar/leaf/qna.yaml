@@ -1,0 +1,26 @@
+created_by: nerdalert
+version: 2
+task_description: dsfgsdfgsf.  xcdvzcv kmk dfg
+seed_examples:
+  - question: dfgsdfg
+    context: dsfg
+    answer: sdfgdsfgsdfg
+  - question: |-
+      sdfdfg
+      adfsdfg
+      fdgsdfgsdfg
+    context: dfgsdf
+    answer: >-
+      sdfgsdfg gter sdfgsdfg gter sdfgsdfg gter sdfgsdfg gter sdfgsdfg gter
+      sdfgsdfg gter sdfgsdfg gter sdfgsdfg gter sdfgsdfg gter sdfgsdfg gter
+      sdfgsdfg gter sdfgsdfg gter sdfgsdfg gter sdfgsdfg gter sdfgsdfg gter
+      sdfgsdfg gter sdfgsdfg gter
+  - question: sdfgb
+    context: sgbdf
+    answer: bgdsebf
+  - question: 4t
+    context: n4t
+    answer: n4tebf
+  - question: n4ws
+    context: dfdsfgdsfgsdfg
+    answer: dsgbndfb
