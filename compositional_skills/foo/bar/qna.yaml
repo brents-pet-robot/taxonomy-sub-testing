@@ -1,0 +1,23 @@
+created_by: nerdalert
+version: 2
+task_description: dfgsdf
+seed_examples:
+  - question: sdfgsdfg
+    context:
+    answer: sdfgsdfgsdfgsd
+  - question: h45
+    context:
+    answer: |-
+      h4th
+      45h4th.
+      w4thg4th
+      th4th
+  - question: sfghwrth
+    context:
+    answer: wrthwrthwrthwrth
+  - question: wrthwrthhh
+    context:
+    answer: wh4
+  - question: 'h464h       h4       '
+    context:
+    answer: h44hh
