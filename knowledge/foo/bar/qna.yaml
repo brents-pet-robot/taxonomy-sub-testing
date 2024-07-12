@@ -1,0 +1,25 @@
+created_by: nerdalert
+version: 2
+domain: dfg
+task_description: dsfgsdfgsfdg-werw-123
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 54d326207932581b675f37c0a8b77b263fbad62b
+  patterns:
+    - rfc7348-20240712T033933666.md
+seed_examples:
+  - question: 'asdfa-1234  567 '
+    answer: 4htqe
+  - question: |-
+      fdgsf sdfg sdfg
+      fdgsf sdfg sdfg
+      fdgsf sdfg sdfg
+    answer: dasfsd3
+  - question: >-
+      fdgsf sdfg sdfg fdgsf sdfg sdfg fdgsf sdfg sdfg fdgsf sdfg sdfg fdgsf sdfg
+      sdfg fdgsf sdfg sdfg
+    answer: fg4rtg
+  - question: t4eradf
+    answer: t4qea
+  - question: aaa
+    answer: ggg
