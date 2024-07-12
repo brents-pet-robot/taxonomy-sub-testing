@@ -63,7 +63,7 @@ jobs:
       - name: "Download schema file"
         run: |
           mkdir -p /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/instructlab/schema/v2/
-          curl -o /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/instructlab/schema/v2/skill.json https://raw.githubusercontent.com/instructlab/schema/main/src/instructlab/schema/v2/skill.json
+          curl -o /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/instructlab/schema/v2/skill.json https://raw.githubusercontent.com/instructlab/schema/main/src/instructlab/schema/v2/compositional_skills.json
           curl -o /opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/instructlab/schema/v2/knowledge.json https://raw.githubusercontent.com/instructlab/schema/main/src/instructlab/schema/v2/knowledge.json
 
       - name: "Ensure schema files are available"
