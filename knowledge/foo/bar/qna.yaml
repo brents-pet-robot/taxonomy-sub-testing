@@ -1,0 +1,50 @@
+created_by: nerdalert
+version: 2
+domain: sdfasdfadsf
+document_outline: sdfa
+document:
+  repo: dfgsdf
+  commit: dfgsdfg
+  patterns:
+    - sdfgsdfgsdf
+seed_examples:
+  - context: asdfa-54321
+    questions_and_answers:
+      - question: teabd
+        answer: df
+      - question: adfaa
+        answer: aa
+      - question: dsb
+        answer: 3t
+  - context: t3ger
+    questions_and_answers:
+      - question: gq3rea
+        answer: gqerdsa
+      - question: vdfaxcvzxf
+        answer: ebfatey
+      - question: ny5rw
+        answer: yn5
+  - context: 4tqea
+    questions_and_answers:
+      - question: wtaddfd
+        answer: wrtgfddfdd
+      - question: tbr
+        answer: bae
+      - question: brwt
+        answer: bwrtr
+  - context: rbtws
+    questions_and_answers:
+      - question: brwt
+        answer: bwrtrb
+      - question: 4tqef
+        answer: 4tt4
+      - question: 4thqeba
+        answer: q4tee
+  - context: t4et4
+    questions_and_answers:
+      - question: t4he
+        answer: h
+      - question: qt4e
+        answer: q4tefds
+      - question: tred
+        answer: t4ere
