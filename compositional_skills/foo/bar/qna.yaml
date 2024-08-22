@@ -1,0 +1,18 @@
+created_by: nerdalert
+version: 3
+task_description: dfgsdf-234
+seed_examples:
+  - question: sdfgsdfg
+    answer: sdfgsdfgsdfgsd
+  - question: h45
+    answer: |-
+      h4th
+      45h4th.
+      w4thg4th
+      th4th
+  - question: sfghwrth
+    answer: wrthwrthwrthwrth
+  - question: wrthwrthhh
+    answer: wh4
+  - question: 'h464h       h4       '
+    answer: h44hh
