@@ -1,0 +1,53 @@
+created_by: nerdalert
+version: 3
+domain: asdfasdf
+document_outline: >-
+  asdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdfasdf
+  asdfasdf asdfasdfasdf asdfasdf asdfasdfasdf asdfasdf asdfasdfasdf asdfasdf
+  asdfasdfasdf asdfasdf asdfasdfasdf asdfasdf asdf
+seed_examples:
+  - context: dfxvdafadsf
+    questions_and_answers:
+      - question: asdfa
+        answer: asdfasdf
+      - question: asdfasdasdf
+        answer: qwe
+      - question: qwefqwefqwef
+        answer: qwefqwefqwef
+  - context: qwerqwerqwefqwef
+    questions_and_answers:
+      - question: qwerqwe
+        answer: qwerqwerqwerqwe
+      - question: qwerqwe343
+        answer: 34r
+      - question: q3ref34
+        answer: 3f4ra
+  - context: 35t4wfe
+    questions_and_answers:
+      - question: 34few
+        answer: 4t32fewds
+      - question: 53gr
+        answer: 45ht
+      - question: 453gqr
+        answer: 4g53erq
+  - context: 4tgqredws4gt
+    questions_and_answers:
+      - question: 4tgqerd
+        answer: 4tgqre3fw
+      - question: 4tqgerw3r
+        answer: 4tger
+      - question: 4tg3rfwe
+        answer: 4tqgerfwdew
+  - context: 4tqhegr
+    questions_and_answers:
+      - question: 45g3rewf
+        answer: 4tqgerf
+      - question: 4g53refwd
+        answer: gq3rfwed
+      - question: 4gqerfwderf
+        answer: 4tgererg
+document:
+  repo: http://foo.org/ererf/erferf
+  commit: ergdsfsdf
+  patterns:
+    - dfgsdfgsdfg
