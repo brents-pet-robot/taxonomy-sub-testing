@@ -1,0 +1,30 @@
+created_by: nerdalert
+version: 2
+domain: kittens
+task_description: |-
+  dsfasdfasfdklm
+  aasdfasdfasdfasdfasdfadsfaasdfasdfasdfasdfasdfadsfaasdfasdfasdfasdfasdfadsf
+  aasdfasdfasdfasdfasdfadsfaasdfasdfasdfasdfasdfadsf
+  aasdfasdfasdfasdfasdfadsfwerwer
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: afc02b565d3ed994054045d5a8772f5ec6aea444
+  patterns:
+    - git-examples-20240624T205015665.md
+seed_examples:
+  - question: |-
+      dsfadfaasdfdsfadfaasdfdsfadfaasdfdsfadfaasdfdsfadfaasdf1234
+      dsfadfaasdf
+      dsfadfaasdfdsfadfaasdfdsfadfaasdf
+      dsfadfaasdfdsfadfaasdfdsfadfaasdf
+    answer: |-
+      dsfadfaasdfdsfadfaasdfdsfadfaasdfdsfadfaasdfdsfadfaasdf
+      dsfadfaasdf qwer
+  - question: dsfadfaasdfdsfadfaasdfdsfadfaasdf asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa 234234
+    answer: dsfadfaasdfjknkjn
+  - question: dsfadfaasdfdsfadfaasdfdsfadfaasdf1kjn
+    answer: dsfadfaasdfkjn
+  - question: dsfadfaasdfdsfadfaasdfdsfadfaasdfdsfadfaasdfdsfadfaasdf34f
+    answer: dsfadfaasdf34f34jkn
+  - question: dsfadfaasdfdsfadfaasdf43345fkjn
+    answer: 2345f2435f4kjn
