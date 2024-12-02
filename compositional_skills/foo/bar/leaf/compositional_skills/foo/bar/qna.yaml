@@ -1,0 +1,23 @@
+created_by: brent.salisbury@gmail.com
+version: 2
+task_description: sdfgsdfgsd
+seed_examples:
+  - question: >-
+      adfadsfasd adfadsfasd adfadsfasd adfadsfasd adfadsfasd adfadsfasd
+      adfadsfasd adfadsfasd adfadsfasd adfadsfasd adfadsfasd adfadsfasd
+      adfadsfasd adfadsfasd adfadsfasd adfadsfasd adfadsfasd adfadsfasd
+      adfadsfasd adfadsfasd adfadsfasd adfadsfasd adfadsfasd 
+    context: dsfgsdfg
+    answer: ererg
+  - question: wetwet
+    context: wrtwrthwtrh
+    answer: wrthwrthtr
+  - question: gndb
+    context: ""
+    answer: wgrfw
+  - question: wrtbgfwrt
+    context: ""
+    answer: wrtfda
+  - question: ynw2
+    context: ""
+    answer: 25y
