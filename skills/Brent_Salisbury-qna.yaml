@@ -1,0 +1,22 @@
+created_by: nerdalert
+version: 2
+task_description: asdfasdfasdf
+seed_examples:
+  - question: sdfadf-1234
+    context: asdfadsfadsf
+    answer: asd
+  - question: t
+    context: 43gt
+    answer: h
+  - question: h4ts
+    context: '4'
+    answer: h424h2
+  - question: h2424
+    context: h244h
+    answer: h24222
+  - question: fds
+    context: '123456789'
+    answer: '1234567890'
+  - question: '12345'
+    context: ''
+    answer: '6789'
