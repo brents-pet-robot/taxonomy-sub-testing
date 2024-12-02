@@ -1,0 +1,20 @@
+created_by: nerdalert
+version: 2
+domain: asdf
+task_description: asdfasdf
+seed_examples:
+  - question: asdfasdf
+    answer: asdf
+  - question: aeth
+    answer: 5h4
+  - question: '24'
+    answer: 24th
+  - question: 24h
+    answer: sdfgs
+  - question: sdfgsd
+    answer: sdfgsdsdf
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: a575405b3e69174d7364460e625166ab704a22b4
+  patterns:
+    - rfc7348-20240708T181115907.md
