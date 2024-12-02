@@ -1,0 +1,19 @@
+created_by: juancappi
+version: 2
+task_description: Just a test contribution
+seed_examples:
+  - question: How do you say "Hello, how are you?" in Spanish?
+    context: ''
+    answer: '"Hola, ¿cómo estás?"'
+  - question: How do you say "Good morning" in Spanish?
+    context: ''
+    answer: '"Buenos días."'
+  - question: How do you say "I would like a coffee" in Spanish?
+    context: ''
+    answer: '"Me gustaría un café."'
+  - question: How do you say "Thank you very much" in Spanish?
+    context: ''
+    answer: '"Muchas gracias."'
+  - question: How do you say "Where is the bathroom?" in Spanish?
+    context: ''
+    answer: '"¿Dónde está el baño?"'
