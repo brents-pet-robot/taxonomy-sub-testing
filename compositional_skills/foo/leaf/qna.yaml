@@ -1,0 +1,22 @@
+created_by: nerdalert
+version: 2
+task_description: testing more details
+seed_examples:
+  - question: Q1
+    context: C1
+    answer: A1
+  - question: Q2
+    context: C2
+    answer: A2
+  - question: Q3
+    context: ""
+    answer: A3
+  - question: Q4
+    context: ""
+    answer: A4
+  - question: Q5
+    context: ""
+    answer: A5
+  - question: Q6
+    context: ""
+    answer: A6
