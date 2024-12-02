@@ -1,0 +1,23 @@
+created_by: nerdalert
+version: 2
+task_description: asdfasdf
+seed_examples:
+  - question: asd
+    context: asdf
+    answer: asdfasdf
+  - question: >-
+      "asdfasf" 'asdf' "asdfasf" 'asdf' "asdfasf" 'asdf' "asdfasf" 'asdf'
+      "asdfasf" 'asdf' "asdfasf" 'asdf' "asdfasf" 'asdf' "asdfasf" 'asdf'
+      "asdfasf" 'asdf' "asdfasf" 'asdf' "asdfasf" 'asdf' "asdfasf" 'asdf'
+      "asdfasf" 'asdf' "asdfasf" 'asdf' "asdfasf" 'asdf' 
+    context: ''
+    answer: dfg
+  - question: thw
+    context: ''
+    answer: 42te
+  - question: 4htqea
+    context: ''
+    answer: 4htqeas
+  - question: afgs
+    context: ''
+    answer: adsfgsdfg
