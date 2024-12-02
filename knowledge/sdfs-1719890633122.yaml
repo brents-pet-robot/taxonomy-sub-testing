@@ -1,0 +1,27 @@
+created_by: nerdalert
+version: 2
+domain: asd
+task_description: asdfadsf
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: e56a4adb35ff59479249a135673a879fcf7a8ed6
+  patterns:
+    - rfc7348-20240630T033700650-20240702T031731505.md
+    - Universal-Language-Model-Fine-tuning-for-Text-Classification-1801.06146v5-20240702T031731505.md
+seed_examples:
+  - question: |-
+      asdfa-54321asdfa-54321asdfa-54321asdfa-54321
+      asdfa-54321asdfa-54321asdfa-54321
+      asdfa-54321asdfa-54321asdfa-54321asdfa-54321asdfa-54321
+      asdfa-54321asdfa-54321asdfa-54321
+    answer: asdfasdfaa
+  - question: asdfass
+    answer: adssaaaa
+  - question: terv
+    answer: 3r
+  - question: vq3tead
+    answer: qt4
+  - question: t34bb
+    answer: 4tvea
+  - question: "12345"
+    answer: "67890"
