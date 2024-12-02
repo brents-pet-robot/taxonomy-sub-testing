@@ -1,0 +1,18 @@
+created_by: nerdalert
+task_description: Detailed Skill Descrip
+seed_examples:
+  - question: Q1-12
+    context: C1
+    answer: A1
+  - question: sdfasdf
+    context: ''
+    answer: asdfasdf
+  - question: rte
+    context: ''
+    answer: t
+  - question: 4ht
+    context: ''
+    answer: 4tqea123rdfdfdfm. g
+  - question: 4qte1kmdf
+    context: ''
+    answer: 4qeree
