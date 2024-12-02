@@ -1,0 +1,24 @@
+created_by: nerdalert
+version: 2
+domain: df
+task_description: sadfasdfadsfadsf
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 662790749cd5f2795c85d2f8fc0193f0ed453258
+  patterns:
+    - rfc7348-20240710T023305870.md
+seed_examples:
+  - question: dsfasdfasdf-12345
+    answer: asdfaa
+  - question: >-
+      tweqrfd "Foo quotes" end tweqrfd "Foo quotes" end tweqrfd "Foo quotes" end
+      tweqrfd "Foo quotes" end tweqrfd "Foo quotes" end tweqrfd "Foo quotes" end
+      tweqrfd "Foo quotes" end tweqrfd "Foo quotes" end tweqrfd "Foo quotes" end
+      tweqrfd "Foo quotes" end tweqrfd "Foo quotes" end 
+    answer: t4hqerfdscxa
+  - question: t4eqbfvda
+    answer: 4the
+  - question: 5yn "foo" sdfg
+    answer: dsfg
+  - question: sdfgsdfgsdfg
+    answer: sdfgsfd
