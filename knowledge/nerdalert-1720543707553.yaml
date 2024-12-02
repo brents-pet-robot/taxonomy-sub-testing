@@ -1,0 +1,20 @@
+created_by: nerdalert
+version: 2
+domain: ewtgqg3
+task_description: g145reqds
+seed_examples:
+  - question: fgdv
+    answer: rwbgdfa
+  - question: wrtb
+    answer: t4
+  - question: 24t
+    answer: rwbg
+  - question: wbrg
+    answer: bwgbq
+  - question: qtb44t
+    answer: t4t4
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: d4d85be68306ab07dff10f439b5612dd5ea3d09f
+  patterns:
+    - rfc7348-20240709T164809576.md
