@@ -1,0 +1,14 @@
+created_by: nerdalert
+version: 2
+task_description: sdfg
+seed_examples:
+  - question: grtew
+    answer: h45qte
+  - question: 4hqtre
+    answer: h42
+  - question: h4224h4h
+    answer: 42h4h4h24h
+  - question: h24h4h46h
+    answer: sdfgs
+  - question: 4545h45
+    answer: 245h42h24h
