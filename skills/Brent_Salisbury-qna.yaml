@@ -1,0 +1,18 @@
+created_by: nerdalert
+task_description: detailed description
+seed_examples:
+  - question: q1dfg
+    context: c1
+    answer: a1
+  - question: df
+    context: ''
+    answer: dfgs
+  - question: dfgss
+    context: dfsg
+    answer: dgeeef
+  - question: gwer
+    context: wtrhdsf
+    answer: trhw
+  - question: wtrwww
+    context: ''
+    answer: wq
