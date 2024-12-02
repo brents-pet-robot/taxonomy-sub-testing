@@ -1,0 +1,16 @@
+created_by: nerdalert
+version: 2
+task_description: asdfadsfadsfadsflm
+seed_examples:
+  - question: sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa lm
+    answer: 'sadfasf asdfasdfa sadfasf asdfasdfa '
+  - question: 'sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdlkmfasdfa sadfasf asdfasdfa sadfasf asdfasdfa '
+    answer: 'sadfasf asdfasdfa lkmsadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa '
+    context: sadfasf asdfasdfa lmk
+  - question: 'sadfasf asdfa; sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa '
+    answer: 'sadfasf asdfasd;,fa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa '
+    context: 'sadfasf asdfasdfa sadfasf asdfasdfa '
+  - question: sadfasf asdfasdlkmlmfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa df
+    answer: sadfasf asdfalkmsdfa sadfasf asdfasdfa er
+  - question: 'adfsadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa sadfasf asdfasdfa '
+    answer: lkmlkm
