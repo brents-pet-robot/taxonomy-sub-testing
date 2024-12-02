@@ -1,0 +1,19 @@
+created_by: brents-pet-robot
+domain: fbgd
+task_description: fgb
+seed_examples:
+  - question: dfgs
+    answer: sfg
+  - question: snhfgd
+    answer: hntgb
+  - question: ngbd
+    answer: fgdb
+  - question: ds
+    answer: g
+  - question: s
+    answer: ehgrfs
+document:
+  repo: https://github.com/brents-pet-robot/instructlab-knowledge-docs
+  commit: 7b750ddf5f0877b22ebcc4fb4e83c628c0f0780f
+  patterns:
+    - git-examples.md
