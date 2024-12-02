@@ -1,0 +1,21 @@
+created_by: nerdalert
+task_description: detailed summary
+seed_examples:
+  - question: q1-12345
+    context: c1
+    answer: a1
+  - question: fd
+    context: ''
+    answer: t4
+  - question: 4ter
+    context: ''
+    answer: 35g
+  - question: g354g
+    context: ''
+    answer: g35qw
+  - question: 34f3f
+    context: f3443f
+    answer: f3434ff
+  - question: q6
+    context: c6
+    answer: a6
