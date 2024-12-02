@@ -1,0 +1,27 @@
+created_by: brent.salisbury@gmail.com
+version: 2
+domain: asdfasdfadf
+task_description: asdfadsfadsfasdf
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 194a228f68af833cd746e8c0d36afc8f1b36c27c
+  patterns:
+    - rfc7348-20240710T021451610.md
+seed_examples:
+  - question: sdfdfg
+    answer: sdfgsdfgsdf
+  - question: >-
+      rwt4th44th rwt4th44th rwt4th44th rwt4th44th rwt4th44th rwt4th44th
+      rwt4th44th rwt4th44th rwt4th44th rwt4th44th rwt4th44th rwt4th44th
+      rwt4th44th rwt4th44th rwt4th44th rwt4th44th rwt4th44th rwt4th44th
+      rwt4th44th rwt4th44th rwt4th44th 
+    answer: tny
+  - question: >-
+      rwt4th44th rwt4th44th rwt4th44th rwt4th44th rwt4th44th rwt4th44th
+      rwt4th44th rwt4th44th rwt4th44th rwt4th44th rwt4th44th rwt4th44th
+      rwt4th44th rwt4th44th rwt4th44th rwt4th44th rwt4th44th
+    answer: dsf
+  - question: 4yn
+    answer: nrwgsf
+  - question: n4ys
+    answer: nywtrss
