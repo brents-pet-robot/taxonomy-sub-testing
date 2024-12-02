@@ -1,0 +1,28 @@
+created_by: nerdalert
+version: 2
+task_description: 'sdfgsdfgsd        '
+seed_examples:
+  - question: 'asdfasdf.                      '
+    context:
+    answer: |
+      dfgsdfgsdf
+      dfgsdfgsdf
+      dfgsdfgsdf
+      dfgsdfgsdf
+      dfgsdfgsdf
+  - question: 'dfgrg33            sdfg. '
+    context: 3gg5             sdfg    g
+    answer: '3gg5r           ssdf     '
+  - question: >-
+      3gg5r           3gg5r           3gg5r           3gg5r 3gg5r
+      3gg5r           3gg5r           3gg5r 3gg5r           3gg5r
+      3gg5r           3gg5r 3gg5r           3gg5r           3gg5r
+      3gg5r 3gg5r           3gg5r           3gg5r
+    context: '3gg5r           wer         '
+    answer: '3gg5r           '
+  - question: f3f3rf3rf3rfsdfg
+    context: f3
+    answer: f34f34
+  - question: g35dfg
+    context: 5dfg
+    answer: 4hterdfs
