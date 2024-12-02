@@ -1,0 +1,19 @@
+created_by: zsdfas@sdf.org
+domain: nhfgbdvs
+task_description: sdfaedf
+seed_examples:
+  - question: hngfd
+    answer: hnfgbd
+  - question: gb
+    answer: grbdfs
+  - question: gfbds
+    answer: fgbds
+  - question: tnyrtbgfed
+    answer: hngrbfds
+  - question: rytgefds
+    answer: dfgh
+document:
+  repo: https://github.com/brents-pet-robot/instructlab-knowledge-docs
+  commit: 12e12724626f1116ad9cce44a0abbc5da7d45d37
+  patterns:
+    - List of countries by GDP (nominal) - Wikipedia.pdf
