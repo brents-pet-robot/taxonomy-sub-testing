@@ -1,0 +1,22 @@
+created_by: nerdalert
+version: 2
+task_description: asdfasdfasdfasdf
+seed_examples:
+  - question: >-
+      adfdfgsdfg adfdfgsdfg adfdfgsdfg adfdfgsdfg adfdfgsdfg adfdfgsdfg
+      adfdfgsdfg adfdfgsdfg adfdfgsdfg adfdfgsdfg adfdfgsdfg adfdfgsdfg
+      adfdfgsdfg adfdfgsdfg 
+    context: ''
+    answer: sdfgsdfg
+  - question: trw
+    context: ''
+    answer: df
+  - question: t4
+    context: ''
+    answer: 4ht
+  - question: ntyw
+    context: ''
+    answer: nyrwg
+  - question: 2rtbf
+    context: ''
+    answer: tredf
