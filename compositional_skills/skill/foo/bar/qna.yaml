@@ -1,0 +1,24 @@
+created_by: nerdalert
+version: 2
+task_description: 'asdfasdf.    '
+seed_examples:
+  - question: 'dfsdfgs      '
+    context: 
+    answer: dsfgsdfg
+  - question: sfdgsdfgsdfg
+    context: 
+    answer: sdfsdfgsdfgsdfg
+  - question: 'sdfgs   '
+    context: 
+    answer: 't4w       '
+  - question: 'g4t               '
+    context: 
+    answer: |-
+      t4gwtg4tg4tg       
+      4rgw4tg        
+      w4tgw4tg        
+  - question: >-
+      fa35f3gera fa35f3gera fa35f3gera fa35f3gera fa35f3gera fa35f3gera
+      fa35f3gera fa35f3gera fa35f3gera fa35f3gera fa35f3gera            
+    context: 
+    answer: dfgrtb
