@@ -1,0 +1,26 @@
+created_by: nerdalert
+version: 2
+task_description: sdfgsfdg
+seed_examples:
+  - question: adfadsf
+    context: adsfasdf
+    answer: asdfadsfasf
+  - question: >-
+      'single' "paren" adf 'single' "paren" adf 'single' "paren" adf 'single'
+      "paren" adf 'single' "paren" adf 'single' "paren" adf 'single' "paren" adf
+      'single' "paren" adf 'single' "paren" adf 'single' "paren" adf 'single'
+      "paren" adf 'single' "paren" adf 'single' "paren" adf 
+    context: null
+    answer: sdfadsfasdf
+  - question: gre
+    context: null
+    answer: g45
+  - question: 5g445
+    context: null
+    answer: 3rf
+  - question: g15g
+    context: null
+    answer: g5g
+  - question: g45g45gg54g42
+    context: null
+    answer: 245g245g24g
