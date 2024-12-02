@@ -1,0 +1,22 @@
+created_by: nerdalert
+version: 2
+domain: sdfgsdfg
+task_description: dfg
+document:
+  repo: https://github.com/nerdalert/instructlab-knowledge-docs
+  commit: 52d67d2224c01b8e56714851edd8e58e6223ddd5
+  patterns:
+    - 2311.18481v1-20240711T022126463.md
+seed_examples:
+  - question: dfg "Quotes" 'single' quote
+    answer: sdf
+  - question: rwt
+    answer: 4h
+  - question: qt4
+    answer: dsa
+  - question: h54
+    answer: adfa
+  - question: h44h
+    answer: h464h4h
+  - question: h44h4hh4
+    answer: h44h4h4
