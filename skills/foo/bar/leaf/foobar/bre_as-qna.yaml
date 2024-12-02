@@ -1,0 +1,45 @@
+created_by: brent.salisbury@gmail.com
+version: 2
+task_description: asdfasdf-ewrwer 1234
+seed_examples:
+  - question: >-
+      asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa
+      asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa
+      asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdfa
+      asdfasdfa asdfasdfa asdfasdfa asdfasdfa asdfasdf 32234234 asdfasdf
+      32234234asdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234 foobar
+    context: ""
+    answer: >-
+      asdfasdf asdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234 asdfasdf bar asdfasdfasdf asdf asdf asdf asdf
+      asdf asdf asdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234asdfasdf 32234234asdfasdf 32234234
+  - question: a
+    context: ""
+    answer: gteq
+  - question: av
+    context: ""
+    answer: qeb
+  - question: qebqeb
+    context: ebq
+    answer: sxfv
+  - question: >-
+      zxcasdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234
+    context: >-
+      asdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234
+    answer: >-
+      bqeq xasdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234asdfasdf 32234234asdfasdf 32234234asdfasdf
+      32234234asdfasdf 32234234
